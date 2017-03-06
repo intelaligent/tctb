@@ -1,0 +1,21 @@
+<configuration>
+    <input>
+	<node-files value="corridor.nod.xml"/>
+	<edge-files value="corridor.edg.xml"/>
+	<type-files value="corridor.typ.xml"/>
+ 	<!--<connection-files value="twinT.con.xml"/>-->
+    </input>
+
+    <output>
+        <output-file value="corridorT.net.xml"/>
+    </output>
+    
+    <processing>
+       <no-turnarounds value="true"/>
+    </processing>
+
+    <report>
+        <verbose value="true"/>
+    </report>
+
+</configuration>

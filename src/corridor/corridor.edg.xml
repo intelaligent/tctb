@@ -1,0 +1,50 @@
+<edges>
+	<edge id="6:4" from="6" to="4" type="uMajor" /> 
+	<edge id="4:0" from="4" to="0" type="uMajor" /> 
+	<edge id="0:1" from="0" to="1" type="uMajor" />
+	<edge id="1:2" from="1" to="2" type="uMajor" /> 
+	<edge id="2:3" from="2" to="3" type="uMajor" />
+	<edge id="3:5" from="3" to="5" type="uMajor" />
+	<edge id="5:7" from="5" to="7" type="uMajor" />
+
+	<edge id="4:6" to="6" from="4" type="uMajor" /> 
+	<edge id="0:4" to="4" from="0" type="uMajor" /> 
+	<edge id="1:0" to="0" from="1" type="uMajor" />
+	<edge id="2:1" to="1" from="2" type="uMajor" /> 
+	<edge id="3:2" to="2" from="3" type="uMajor" />
+	<edge id="5:3" to="3" from="5" type="uMajor" />
+	<edge id="7:5" to="5" from="7" type="uMajor" />
+
+	<edge id="9:8" from="9" to="8" type="uMinor" />
+	<edge id="8:0" from="8" to="0" type="uMinor" /> 
+	<edge id="0:10" from="0" to="10" type="uMinor" />
+	<edge id="10:11" from="10" to="11" type="uMinor" />
+
+	<edge id="1:12" from="1" to="12" type="uMinor" />
+	<edge id="12:13" from="12" to="13" type="uMinor" /> 
+	
+	<edge id="15:14" from="15" to="14" type="uMinor" />
+	<edge id="14:2" from="14" to="2" type="uMinor" />
+	
+	<edge id="17:16" from="17" to="16" type="uMinor" />
+	<edge id="16:3" from="16" to="3" type="uMinor" /> 
+	<edge id="3:18" from="3" to="18" type="uMinor" />
+	<edge id="18:19" from="18" to="19" type="uMinor" />
+
+	<edge id="8:9" to="9" from="8" type="uMinor" />
+	<edge id="0:8" to="8" from="0" type="uMinor" /> 
+	<edge id="10:0" to="0" from="10" type="uMinor" />
+	<edge id="11:10" to="10" from="11" type="uMinor" />
+
+	<edge id="12:1" to="1" from="12" type="uMinor" />
+	<edge id="13:12" to="12" from="13" type="uMinor" /> 
+	
+	<edge id="14:15" to="15" from="14" type="uMinor" />
+	<edge id="2:14" to="14" from="2" type="uMinor" />
+	
+	<edge id="16:17" to="17" from="16" type="uMinor" />
+	<edge id="3:16" to="16" from="3" type="uMinor" /> 
+	<edge id="18:3" to="3" from="18" type="uMinor" />
+	<edge id="19:18" to="18" from="19" type="uMinor" />
+	
+</edges>

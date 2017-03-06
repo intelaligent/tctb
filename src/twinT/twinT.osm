@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' generator='JOSM'>
+  <node id='-18' action='modify' visible='true' lat='0.00907298433168206' lon='-0.013932172584707306' />
+  <node id='-16' action='modify' visible='true' lat='0.00907298433168206' lon='-0.018105503042993326'>
+    <tag k='highway' v='traffic_signals' />
+  </node>
+  <node id='-14' action='modify' visible='true' lat='0.00907298433168206' lon='-0.020391756949513135'>
+    <tag k='highway' v='traffic_signals' />
+  </node>
+  <node id='-12' action='modify' visible='true' lat='0.009088865800702768' lon='-0.02454415946146904' />
+  <node id='-10' visible='true' lat='0.004314861466583463' lon='-0.020392304541519538' />
+  <node id='-8' visible='true' lat='0.003642229133150557' lon='-0.020392304541519538' />
+  <node id='-6' visible='true' lat='0.004328874640190646' lon='-0.018108157237050403' />
+  <node id='-4' visible='true' lat='0.0036562423067691844' lon='-0.018108157237050403' />
+  <way id='-24' action='modify' visible='true'>
+    <nd ref='-12' />
+    <nd ref='-14' />
+    <nd ref='-16' />
+    <nd ref='-18' />
+    <tag k='highway' v='primary' />
+    <tag k='lanes' v='4' />
+    <tag k='maxspeed' v='50' />
+    <tag k='name' v='HighRd' />
+    <tag k='ref' v='A1' />
+  </way>
+  <way id='-22' action='modify' visible='true'>
+    <nd ref='-14' />
+    <nd ref='-10' />
+    <nd ref='-8' />
+    <tag k='highway' v='secondary' />
+    <tag k='lanes' v='2' />
+    <tag k='maxspeed' v='50' />
+    <tag k='name' v='SideRd' />
+    <tag k='ref' v='B1' />
+  </way>
+  <way id='-20' action='modify' visible='true'>
+    <nd ref='-4' />
+    <nd ref='-6' />
+    <nd ref='-16' />
+    <tag k='highway' v='primary' />
+    <tag k='lanes' v='2' />
+    <tag k='maxspeed' v='50' />
+    <tag k='name' v='SideRd' />
+    <tag k='ref' v='B2' />
+  </way>
+</osm>

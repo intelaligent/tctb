@@ -1,0 +1,17 @@
+<configuration>
+    <input>
+        <net-file value="simpleT.net.xml"/>
+        <route-files value="simpleT.rou.xml"/>
+	<additional-files value="simpleT.det.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+	<!--<step-length value="0.1"/>-->
+    </time>
+    <report>
+	<no-step-log value="true"/>
+    </report>
+    <traci_server>
+        <remote-port value="8813"/>
+    </traci_server>
+</configuration>

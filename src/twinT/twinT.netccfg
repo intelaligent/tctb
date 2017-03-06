@@ -1,0 +1,22 @@
+<configuration>
+    <input>
+        <!--<osm-files value="twinT.osm"/>-->
+	<node-files value="twinT.nod.xml"/>
+	<edge-files value="twinT.edg.xml"/>
+	<type-files value="twinT.typ.xml"/>
+ 	<connection-files value="twinT.con.xml"/>
+    </input>
+
+    <output>
+        <output-file value="twinT.net.xml"/>
+    </output>
+    
+    <processing>
+       <no-turnarounds value="true"/>
+    </processing>
+
+    <report>
+        <verbose value="true"/>
+    </report>
+
+</configuration>

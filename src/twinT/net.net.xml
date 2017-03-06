@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Mon Feb  4 10:34:06 2013 by SUMO netconvert Version 0.16.0
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.sf.net/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <osm-files value="twinT.OSM"/>
+    </input>
+
+    <output>
+        <output-file value="net.net.xml"/>
+    </output>
+
+    <projection>
+        <proj.utm value="true"/>
+    </projection>
+
+</configuration>
+-->
+
+<net version="0.13" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.sf.net/xsd/net_file.xsd">
+
+    <location netOffset="-831243.66,-506.78" convBoundary="0.00,0.00,1182.46,499.18" origBoundary="-0.024544,0.004579,-0.013932,0.009089" projParameter="+proj=utm +zone=30 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"/>
+
+    <edge id=":-11_0" function="internal">
+        <lane id=":-11_0_0" index="0" speed="13.89" length="4.82" shape="1182.46,495.78 1183.70,496.60 1184.11,497.43 1183.70,498.25 1182.46,499.08"/>
+    </edge>
+    <edge id=":-3_0" function="internal">
+        <lane id=":-3_0_0" index="0" speed="13.89" length="4.82" shape="0.01,500.83 -1.23,500.01 -1.65,499.18 -1.24,498.36 -0.01,497.53"/>
+    </edge>
+    <edge id=":-6_0" function="internal">
+        <lane id=":-6_0_0" index="0" speed="13.89" length="0.10" shape="462.69,499.07 462.69,499.07"/>
+    </edge>
+    <edge id=":-6_1" function="internal">
+        <lane id=":-6_1_0" index="0" speed="13.89" length="2.41" shape="462.69,499.07 461.45,498.25 461.04,497.42"/>
+    </edge>
+    <edge id=":-6_4" function="internal">
+        <lane id=":-6_4_0" index="0" speed="13.89" length="2.41" shape="461.04,497.42 461.45,496.60 462.69,495.77"/>
+    </edge>
+    <edge id=":-6_2" function="internal">
+        <lane id=":-6_2_0" index="0" speed="13.89" length="0.10" shape="462.69,495.77 462.69,495.77"/>
+    </edge>
+    <edge id=":-6_3" function="internal">
+        <lane id=":-6_3_0" index="0" speed="13.89" length="2.41" shape="462.69,495.77 463.93,496.60 464.34,497.42"/>
+    </edge>
+    <edge id=":-6_5" function="internal">
+        <lane id=":-6_5_0" index="0" speed="13.89" length="2.41" shape="464.34,497.42 463.93,498.25 462.69,499.07"/>
+    </edge>
+    <edge id=":-9_0" function="internal">
+        <lane id=":-9_0_0" index="0" speed="13.89" length="0.10" shape="717.44,499.08 717.44,499.08"/>
+    </edge>
+    <edge id=":-9_1" function="internal">
+        <lane id=":-9_1_0" index="0" speed="13.89" length="2.41" shape="717.44,499.08 716.20,498.25 715.79,497.43"/>
+    </edge>
+    <edge id=":-9_4" function="internal">
+        <lane id=":-9_4_0" index="0" speed="13.89" length="2.41" shape="715.79,497.43 716.20,496.60 717.44,495.78"/>
+    </edge>
+    <edge id=":-9_2" function="internal">
+        <lane id=":-9_2_0" index="0" speed="13.89" length="0.10" shape="717.44,495.78 717.44,495.78"/>
+    </edge>
+    <edge id=":-9_3" function="internal">
+        <lane id=":-9_3_0" index="0" speed="13.89" length="2.41" shape="717.44,495.78 718.67,496.60 719.09,497.43"/>
+    </edge>
+    <edge id=":-9_5" function="internal">
+        <lane id=":-9_5_0" index="0" speed="13.89" length="2.41" shape="719.09,497.43 718.67,498.25 717.44,499.08"/>
+    </edge>
+
+    <edge id="--7#0" from="-6" to="-3" priority="9" type="highway.primary">
+        <lane id="--7#0_0" index="0" speed="13.89" length="462.69" shape="462.69,499.07 0.01,500.83"/>
+    </edge>
+    <edge id="--7#1" from="-9" to="-6" priority="9" type="highway.primary">
+        <lane id="--7#1_0" index="0" speed="13.89" length="254.75" shape="717.44,499.08 462.69,499.07"/>
+    </edge>
+    <edge id="--7#2" from="-11" to="-9" priority="9" type="highway.primary">
+        <lane id="--7#2_0" index="0" speed="13.89" length="465.02" shape="1182.46,499.08 717.44,499.08"/>
+    </edge>
+    <edge id="-7#0" from="-3" to="-6" priority="9" type="highway.primary">
+        <lane id="-7#0_0" index="0" speed="13.89" length="462.70" shape="-0.01,497.53 462.69,495.77"/>
+    </edge>
+    <edge id="-7#1" from="-6" to="-9" priority="9" type="highway.primary">
+        <lane id="-7#1_0" index="0" speed="13.89" length="254.75" shape="462.69,495.77 717.44,495.78"/>
+    </edge>
+    <edge id="-7#2" from="-9" to="-11" priority="9" type="highway.primary">
+        <lane id="-7#2_0" index="0" speed="13.89" length="465.02" shape="717.44,495.78 1182.46,495.78"/>
+    </edge>
+
+    <junction id="-11" type="priority" x="1182.46" y="497.43" incLanes="-7#2_0" intLanes=":-11_0_0" shape="1182.46,497.48 1182.46,500.68 1182.46,494.18 1182.46,497.38">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="-3" type="priority" x="0.00" y="499.18" incLanes="--7#0_0" intLanes=":-3_0_0" shape="-0.00,499.13 -0.01,495.93 0.01,502.43 0.00,499.23">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="-6" type="priority" x="462.69" y="497.42" incLanes="--7#1_0 -7#0_0" intLanes=":-6_0_0 :-6_4_0 :-6_2_0 :-6_5_0" shape="462.69,500.67 462.69,494.17 462.70,500.67">
+        <request index="0" response="0000" foes="1000" cont="0"/>
+        <request index="1" response="0100" foes="0100" cont="1"/>
+        <request index="2" response="0000" foes="0010" cont="0"/>
+        <request index="3" response="0001" foes="0001" cont="1"/>
+    </junction>
+    <junction id="-9" type="priority" x="717.44" y="497.43" incLanes="--7#2_0 -7#1_0" intLanes=":-9_0_0 :-9_4_0 :-9_2_0 :-9_5_0" shape="717.44,500.68 717.44,494.18 717.44,500.68">
+        <request index="0" response="0000" foes="1000" cont="0"/>
+        <request index="1" response="0100" foes="0100" cont="1"/>
+        <request index="2" response="0000" foes="0010" cont="0"/>
+        <request index="3" response="0001" foes="0001" cont="1"/>
+    </junction>
+
+    <junction id=":-6_4_0" type="internal" x="461.04" y="497.42" incLanes=":-6_1_0 -7#0_0" intLanes=":-6_2_0"/>
+    <junction id=":-6_5_0" type="internal" x="464.34" y="497.42" incLanes=":-6_3_0 --7#1_0" intLanes=":-6_0_0"/>
+    <junction id=":-9_4_0" type="internal" x="715.79" y="497.43" incLanes=":-9_1_0 -7#1_0" intLanes=":-9_2_0"/>
+    <junction id=":-9_5_0" type="internal" x="719.09" y="497.43" incLanes=":-9_3_0 --7#2_0" intLanes=":-9_0_0"/>
+
+    <connection from="--7#0" to="-7#0" fromLane="0" toLane="0" via=":-3_0_0" dir="t" state="M"/>
+    <connection from="--7#1" to="--7#0" fromLane="0" toLane="0" via=":-6_0_0" dir="s" state="M"/>
+    <connection from="--7#1" to="-7#1" fromLane="0" toLane="0" via=":-6_1_0" dir="t" state="m"/>
+    <connection from="--7#2" to="--7#1" fromLane="0" toLane="0" via=":-9_0_0" dir="s" state="M"/>
+    <connection from="--7#2" to="-7#2" fromLane="0" toLane="0" via=":-9_1_0" dir="t" state="m"/>
+    <connection from="-7#0" to="-7#1" fromLane="0" toLane="0" via=":-6_2_0" dir="s" state="M"/>
+    <connection from="-7#0" to="--7#0" fromLane="0" toLane="0" via=":-6_3_0" dir="t" state="m"/>
+    <connection from="-7#1" to="-7#2" fromLane="0" toLane="0" via=":-9_2_0" dir="s" state="M"/>
+    <connection from="-7#1" to="--7#1" fromLane="0" toLane="0" via=":-9_3_0" dir="t" state="m"/>
+    <connection from="-7#2" to="--7#2" fromLane="0" toLane="0" via=":-11_0_0" dir="t" state="M"/>
+
+    <connection from=":-11_0" to="--7#2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":-3_0" to="-7#0" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":-6_0" to="--7#0" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":-6_1" to="-7#1" fromLane="0" toLane="0" via=":-6_4_0" dir="s" state="M"/>
+    <connection from=":-6_4" to="-7#1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":-6_2" to="-7#1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":-6_3" to="--7#0" fromLane="0" toLane="0" via=":-6_5_0" dir="s" state="M"/>
+    <connection from=":-6_5" to="--7#0" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":-9_0" to="--7#1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":-9_1" to="-7#2" fromLane="0" toLane="0" via=":-9_4_0" dir="s" state="M"/>
+    <connection from=":-9_4" to="-7#2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":-9_2" to="-7#2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":-9_3" to="--7#1" fromLane="0" toLane="0" via=":-9_5_0" dir="s" state="M"/>
+    <connection from=":-9_5" to="--7#1" fromLane="0" toLane="0" dir="s" state="M"/>
+
+</net>

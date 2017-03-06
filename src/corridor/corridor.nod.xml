@@ -1,0 +1,27 @@
+<nodes>
+	<node id="0" x="150" y="0" type="traffic_light"/>
+	<node id="1" x="250" y="0" type="traffic_light"/>
+	<node id="2" x="325" y="0" type="traffic_light"/>
+	<node id="3" x="475" y="0" type="traffic_light"/>
+
+	<node id="4" x="35" y="0" type="priority"/>
+	<node id="5" x="590" y="0" type="priority"/>
+	<node id="6" x="0" y="0" type="priority"/>
+	<node id="7" x="625" y="0" type="priority"/>
+
+	<node id="8" x="150" y="115" type="priority"/>
+	<node id="9" x="150" y="150" type="priority"/>
+	<node id="10" x="150" y="-115" type="priority"/>
+	<node id="11" x="150" y="-150" type="priority"/>
+
+	<node id="12" x="250" y="-115" type="priority"/>
+	<node id="13" x="250" y="-150" type="priority"/>
+	
+	<node id="14" x="325" y="115" type="priority"/>
+	<node id="15" x="325" y="150" type="priority"/>
+
+	<node id="16" x="475" y="115" type="priority"/>
+	<node id="17" x="475" y="150" type="priority"/>
+	<node id="18" x="475" y="-115" type="priority"/>
+	<node id="19" x="475" y="-150" type="priority"/>
+</nodes>

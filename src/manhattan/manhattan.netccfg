@@ -1,0 +1,20 @@
+<configuration>
+    <input>
+	<node-files value="manhattan.nod.xml"/>
+	<edge-files value="manhattan.edg.xml"/>
+	<type-files value="manhattan.typ.xml"/>
+    </input>
+
+    <output>
+        <output-file value="manhattan.net.xml"/>
+    </output>
+    
+    <processing>
+       <no-turnarounds value="true"/>
+    </processing>
+
+    <report>
+        <verbose value="true"/>
+    </report>
+
+</configuration>

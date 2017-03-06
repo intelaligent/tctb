@@ -1,0 +1,61 @@
+<edges>
+	<edge id="a1:b1" from="a1" to="b1" type="uMinor" />
+	<edge id="b1:c1" from="b1" to="c1" type="uMinor" />
+	<edge id="c1:d1" from="c1" to="d1" type="uMinor" />
+	<edge id="d1:e1" from="d1" to="e1" type="uMinor" />
+
+	<edge id="a2:b2" from="a2" to="b2" type="uMinor" />
+	<edge id="b2:c2" from="b2" to="c2" type="uMinor" />
+	<edge id="c2:d2" from="c2" to="d2" type="uMinor" />
+	<edge id="d2:e2" from="d2" to="e2" type="uMinor" />
+
+	<edge id="a3:b3" from="a3" to="b3" type="uMinor" />
+	<edge id="b3:c3" from="b3" to="c3" type="uMinor" />
+	<edge id="c3:d3" from="c3" to="d3" type="uMinor" />
+	<edge id="d3:e3" from="d3" to="e3" type="uMinor" />
+
+	<edge id="b0:b1" from="b0" to="b1" type="uMinor" />
+	<edge id="b1:b2" from="b1" to="b2" type="uMinor" />
+	<edge id="b2:b3" from="b2" to="b3" type="uMinor" />
+	<edge id="b3:b4" from="b3" to="b4" type="uMinor" />
+
+	<edge id="c0:c1" from="c0" to="c1" type="uMinor" />
+	<edge id="c1:c2" from="c1" to="c2" type="uMinor" />
+	<edge id="c2:c3" from="c2" to="c3" type="uMinor" />
+	<edge id="c3:c4" from="c3" to="c4" type="uMinor" />
+	
+	<edge id="d0:d1" from="d0" to="d1" type="uMinor" />
+	<edge id="d1:d2" from="d1" to="d2" type="uMinor" />
+	<edge id="d2:d3" from="d2" to="d3" type="uMinor" />
+	<edge id="d3:d4" from="d3" to="d4" type="uMinor" />
+
+	<edge id="b1:a1" to="a1" from="b1" type="uMinor" />
+	<edge id="c1:b1" to="b1" from="c1" type="uMinor" />
+	<edge id="d1:c1" to="c1" from="d1" type="uMinor" />
+	<edge id="e1:d1" to="d1" from="e1" type="uMinor" />
+
+	<edge id="b2:a2" to="a2" from="b2" type="uMinor" />
+	<edge id="c2:b2" to="b2" from="c2" type="uMinor" />
+	<edge id="d2:c2" to="c2" from="d2" type="uMinor" />
+	<edge id="e2:d2" to="d2" from="e2" type="uMinor" />
+
+	<edge id="b3:a3" to="a3" from="b3" type="uMinor" />
+	<edge id="c3:b3" to="b3" from="c3" type="uMinor" />
+	<edge id="d3:c3" to="c3" from="d3" type="uMinor" />
+	<edge id="e3:ed" to="d3" from="e3" type="uMinor" />
+
+	<edge id="b1:b0" to="b0" from="b1" type="uMinor" />
+	<edge id="b2:b1" to="b1" from="b2" type="uMinor" />
+	<edge id="b3:b2" to="b2" from="b3" type="uMinor" />
+	<edge id="b4:b3" to="b3" from="b4" type="uMinor" />
+
+	<edge id="c1:c0" to="c0" from="c1" type="uMinor" />
+	<edge id="c2:c1" to="c1" from="c2" type="uMinor" />
+	<edge id="c3:c2" to="c2" from="c3" type="uMinor" />
+	<edge id="c4:c3" to="c3" from="c4" type="uMinor" />
+	
+	<edge id="d1:d0" to="d0" from="d1" type="uMinor" />
+	<edge id="d2:d1" to="d1" from="d2" type="uMinor" />
+	<edge id="d3:d2" to="d2" from="d3" type="uMinor" />
+	<edge id="d4:d3" to="d3" from="d4" type="uMinor" />	 
+</edges>

@@ -1,0 +1,5 @@
+<junction id="1" offset="0">
+	<stage id="1" controlString="GGgrrrrGGG" period="30"/>
+	<stage id="2" controlString="GGGrrrrrrr" period="15"/>
+	<stage id="3" controlString="rrrGGGGrrr" period="30"/>
+</junction>

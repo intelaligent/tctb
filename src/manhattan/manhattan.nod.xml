@@ -1,0 +1,29 @@
+<nodes>
+	<node id="b1" x="120" y="120" type="traffic_light"/>
+	<node id="b2" x="240" y="120" type="traffic_light"/>
+	<node id="b3" x="360" y="120" type="traffic_light"/>
+
+	<node id="c1" x="120" y="240" type="traffic_light"/>
+	<node id="c2" x="240" y="240" type="traffic_light"/>
+	<node id="c3" x="360" y="240" type="traffic_light"/>
+
+	<node id="d1" x="120" y="360" type="traffic_light"/>
+	<node id="d2" x="240" y="360" type="traffic_light"/>
+	<node id="d3" x="360" y="360" type="traffic_light"/>
+	
+	<node id="a1" x="120" y="0" type="priority"/>
+	<node id="a2" x="240" y="0" type="priority"/>
+	<node id="a3" x="360" y="0" type="priority"/>
+
+	<node id="e1" x="120" y="480" type="priority"/>
+	<node id="e2" x="240" y="480" type="priority"/>
+	<node id="e3" x="360" y="480" type="priority"/>
+
+	<node id="b0" x="0" y="120" type="priority"/>
+	<node id="c0" x="0" y="240" type="priority"/>
+	<node id="d0" x="0" y="360" type="priority"/>
+
+	<node id="b4" x="480" y="120" type="priority"/>
+	<node id="c4" x="480" y="240" type="priority"/>
+	<node id="d4" x="480" y="360" type="priority"/>
+</nodes>
