@@ -1,0 +1,44 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+
+entries:
+- title: Sidebar
+  product: Tutorial 1
+  version: (v1.0)
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
+  - title: Using the Test Set
+    output: web, pdf
+    folderitems:
+    - title: Overview
+      url: /t1_landing_page.html
+      output: web
+
+    - title: Simple T
+      url: /t1_simpleT.html
+      output: web, pdf
+
+    - title: Twin T
+      url: /t1_twinT.html
+      output: web, pdf
+
+    - title: Corridor
+      url: /t1_corridor.html
+      output: web, pdf
+
+    - title: Manhattan Grid
+      url: /t1_mgrid.html
+      output: web, pdf

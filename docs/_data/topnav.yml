@@ -1,0 +1,22 @@
+## Topnav single links
+## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
+topnav:
+- title: Topnav
+  items:
+    - title: News
+      url: /news
+
+#Topnav dropdowns
+topnav_dropdowns:
+- title: Topnav dropdowns
+  folders:
+    - title: Tutorials
+      folderitems:
+        - title: "0.Introduction to SUMO"
+          url: /mydoc_introduction.html
+        - title: "1.Using the Test Set"
+          url: /t1_landing_page.html
+    - title: Links
+      folderitems:
+        - title: Github Repo
+          external_url: https://github.com/intelaligent/tctester
