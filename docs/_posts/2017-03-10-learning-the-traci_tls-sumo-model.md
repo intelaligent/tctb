@@ -9,6 +9,8 @@ tags: [notes, sumo]
 
 TraCI\_tls is a simple SUMO model developed as part of SUMO's tutorial on [TraCI](http://sumo.dlr.de/wiki/TraCI). Depite the tutorial material given [here](http://sumo.dlr.de/wiki/Tutorials/TraCI4Traffic_Lights), I found it to be difficult to understand the model from a software's point of view. Therefore, I wrote this note to supplement the TraCI\_tls tutorial. Codes related to this model is hosted [here](https://sourceforge.net/p/sumo/code/HEAD/tree/trunk/sumo/tests/complex/tutorial/traci_tls/).
 
+This model has the following file structure:
+
 <pre>
 .
 +-- data
@@ -37,7 +39,7 @@ This folder contains all "physical assets" of the model. Let's take a look at wh
 
 ### Nodes and Edges
 
-Nodes and edges are the most basic elements of a SUMO model. Nodes are the reference points on a map, the "A" and "B" in "Going from A to B". Edges are the paths connecting these reference points.
+Nodes and edges are the most basic elements of a SUMO model. Nodes are the reference points on a map, i.e. the "A" and "B" in "Going from A to B". Edges are the paths connecting these reference points.
 
 
 cross.**nod**.xml
@@ -75,6 +77,9 @@ cross.**edg**.xml
 </edges>
 ```
 
+To illustrate, we now have:
+
+![Illustration 1](https://github.com/intelaligent/tctester/blob/master/docs/images/learn_traci_1.png)
 
 
 I found [this document][1] to be useful to understand the XML 
