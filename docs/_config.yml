@@ -70,7 +70,7 @@ defaults:
       layout: "page"
       comments: true
       search: true
-      sidebar: home_sidebar
+      sidebar: t1_sidebar
   -
     scope:
       path: ""
@@ -89,16 +89,14 @@ defaults:
       layout: "post"
       comments: true
       search: true
-      sidebar: home_sidebar
+      sidebar: t1_sidebar
 
 # these are defaults used for the frontmatter for these file types
 
 sidebars:
-- home_sidebar
-- mydoc_sidebar
-- product1_sidebar
-- product2_sidebar
-- other
+- t0_sidebar
+- t1_sidebar
+
 
 description: "A standard test set for evaluating traffic control technologies."
 # the description is used in the feed.xml file
