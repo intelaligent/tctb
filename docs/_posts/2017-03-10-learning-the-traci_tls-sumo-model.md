@@ -79,7 +79,7 @@ cross.**edg**.xml
 
 To illustrate, we now have:
 
-![Illustration 1](https://github.com/intelaligent/tctester/blob/master/docs/images/learn_traci_1.png)
+![Illustration 1](https://intelaligent.github.io/tctester/images/learn_traci_1.png)
 
 
 I found [this document][1] to be useful to understand the XML 
