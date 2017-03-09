@@ -2,7 +2,7 @@
 title: The Traffic Control Test Set Project
 keywords: homepage
 tags: [index]
-sidebar: home_sidebar
+sidebar: t1_sidebar
 permalink: index.html
 toc: false
 summary: Developing a standard test set for evaluating traffic control technologies.

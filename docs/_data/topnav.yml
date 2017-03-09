@@ -10,13 +10,15 @@ topnav:
 topnav_dropdowns:
 - title: Topnav dropdowns
   folders:
-    - title: Tutorials
+    - title: Documents
       folderitems:
         - title: "0.Introduction to SUMO"
-          url: /mydoc_introduction.html
-        - title: "1.Using the Test Set"
+          url: /intro_to_sumo.html
+        - title: "1.About the Test Set"
           url: /t1_landing_page.html
     - title: Links
       folderitems:
         - title: Github Repo
           external_url: https://github.com/intelaligent/tctester
+        - title: Transport Research Group
+          external_url: http://www.southampton.ac.uk/engineering/research/groups/transportation_group.page?

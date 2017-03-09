@@ -9,7 +9,7 @@ topnav_title: Traffic Control Test Set
 site_title: Traffic Control Test Set Documentation
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-company_name: Intelaligent, University of Southampton
+company_name: Intelaligent Transport Research, University of Southampton
 # this appears in the footer
 
 github_editme_path:
@@ -30,7 +30,7 @@ exclude:
   - .gitignore
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_subject_line: Jekyll documentation theme
+feedback_subject_line: Traffic Control Test Set
 
 feedback_email: b.gao@soton.ac.uk
 # used as a contact email for the Feedback link in the top navigation bar
