@@ -1,7 +1,7 @@
 ---
 title:  "Welcome to the Traffic Control Test set!"
-categories: jekyll update
-permalink: myupdate.html
+categories: updates
+permalink: post-first-post.html
 tags: [news]
 ---
 
