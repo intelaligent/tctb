@@ -8,9 +8,9 @@ tags: [notes, sumo, beginner]
 
 ## Introduction
 
-TraCI\_tls is a simple SUMO model developed as part of SUMO's tutorial on [TraCI](http://sumo.dlr.de/wiki/TraCI). Depite the tutorial material given [here](http://sumo.dlr.de/wiki/Tutorials/TraCI4Traffic_Lights), I found it difficult to understand the model from a software's point of view. Therefore, I wrote this note to supplement the TraCI\_tls tutorial. Codes related to this model is hosted [here](https://sourceforge.net/p/sumo/code/HEAD/tree/trunk/sumo/tests/complex/tutorial/traci_tls/).
+TraCI\_tls is a simple SUMO model developed as part of SUMO's tutorial on [TraCI](http://sumo.dlr.de/wiki/TraCI). Depite the tutorial material given [here](http://sumo.dlr.de/wiki/Tutorials/TraCI4Traffic_Lights), I found it difficult to understand the model from a software's point of view. Also making connections between SUMO's wiki is also not a simple task. Therefore, I wrote this study note to supplement the TraCI\_tls tutorial. Codes related to this model is hosted [here](https://sourceforge.net/p/sumo/code/HEAD/tree/trunk/sumo/tests/complex/tutorial/traci_tls/).
 
-This model has the following file structure:
+First let's take a look at the file structure of TraCI\_tls:
 
 <pre>
 .
@@ -19,9 +19,9 @@ This model has the following file structure:
 |   +-- cross.<b>edg</b>.xml 		<b>edges, paths, roads</b>
 |   +-- [cross.<b>typ</b>.xml] 	<b>edge types</b>
 |   +-- cross.<b>con</b>.xml 	<b></b>
-|   +-- cross.<b>det</b>.xml 	<b></b>
 |   +-- cross.<b>netccfg</b>	<b></b>
 |   +-- cross.<b>net</b>.xml 	<b></b>
+|   +-- cross.<b>det</b>.xml 	<b></b>
 |   +-- cross.<b>rou</b>.xml 	<b></b>
 |   +-- cross.<b>out</b> 		<b>output</b>
 |   +-- cross.<b>sumocfg</b>
@@ -94,7 +94,7 @@ Before we finish this section, let's quickly summarise what we know about the de
 
 ![Illustration: Nodes and Edges](https://intelaligent.github.io/tctester/images/learn_traci_1.svg)
 
-**Further readings**: On `node` types (extract from [here][1]:):
+**Further reading**: On `node` types (extract from [here][1]:):
 {% capture text-capture-3 %}
 
  - `priority`: Vehicles on a low-priority edge have to wait until vehicles on a high-priority edge have passed the junction.
@@ -175,8 +175,134 @@ We now have 8 edges all associated with `node` 0, a `traffic_light` typed `node`
 {% endcapture %}
 {% include custom/toggle-field.html toggle-name="toggle-7" button-text="cross.con.xml" toggle-text=text-capture-7  footer="" %}
 
+The code for `connection`s are self-explanatory with `from` and `to` to establish a link between two edges which we illustrate below:
 ![Illustration: Connections](https://intelaligent.github.io/tctester/images/learn_traci_2.svg)
 
+Indeed, `from` and `to` are the most essential attributes of a `connection`. Other attributes are also available for defining a connection:
+
+{% capture text-capture-8 %}
+| Attribute | Description |
+|-------|-------|
+| fromLane | \<int\>, the lane index of the incoming lane (numbers starting with 0) |
+| toLane | \<int\>, the lane index of the outgoing lane (numbers starting with 0) |
+| pass | \<bool\>, if set, vehicles which pass this (lane-2-lane) connection) will not wait |
+| keepClear | \<bool\>, if set to false, vehicles which pass this (lane-2-lane) connection) will not worry about blocking the intersection. |
+| contPos | \<float\>, if set to 0, no internal junction will be built for this connection. If set to a positive value, an internal junction will be built at this position (in m) from the start of the internal lane for this connection. |
+| visibility | \<float\>, specifies the distance to the connection [in m.] below which an approaching vehicle has full sight of any other approaching vehicles on the connection's foe lanes (i.e. vehicle can accelerate if none are present). Defaults to 4.5m. Note that a too low visibility (\<=0.1m.) will prevent vehicles from crossing a minor link. For major links the attribute has no effect, currently. |
+| uncontrolled | \<bool\>, if set to true, This connection will not be TLS-controlled despite its node being controlled. |
+{% endcapture %}
+{% include custom/toggle-field.html toggle-name="toggle-8" button-text="connection attributes" toggle-text=text-capture-8  footer="" %}
+
+According to these attributes, there are a lot you can do with a `connection`, but let's concentrate on TraCI_tls for now.
+
+**Further reading** on `connection`s is available [here](http://sumo.dlr.de/wiki/Networks/Building_Networks_from_own_XML-descriptions#Connection_Descriptions) .
+
+### Generate `*.net.xml`, with `netconvert` and `*.netccfg`
+
+Before we dive deeper in the `data` folder, let's take a look at what assets we have got so far for the TraCI_tls model:
+<pre>
+.
++-- data
+|   +-- <i class="fa fa-check-square"> </i>cross.<b>nod</b>.xml 		<b>nodes, junctions</b>
+|   +-- <i class="fa fa-check-square"> </i>cross.<b>edg</b>.xml 		<b>edges, paths, roads</b>
+|   +-- <i class="fa fa-check-square"> </i>[cross.<b>typ</b>.xml] 		<b>edge types</b>
+|   +-- <i class="fa fa-check-square"> </i>cross.<b>con</b>.xml			<b>connection between edges</b>
+|   +-- <i class="fa fa-square"> </i>cross.<b>netccfg</b>
+|   +-- <i class="fa fa-square"> </i>cross.<b>net</b>.xml
+|   +-- <i class="fa fa-square"> </i>cross.<b>det</b>.xml
+|   +-- <i class="fa fa-square"> </i>cross.<b>rou</b>.xml
+|   +-- <i class="fa fa-square"> </i>cross.<b>out</b>
+|   +-- <i class="fa fa-square"> </i>cross.<b>sumocfg</b>
+...
+</pre>
+With the 4 checked files, we are now ready to put the `node`s, `edge`s, and `connection`s together to construct a complete "network". In order to do this, first we need to write a network configuration file named `cross.netccfg`:
+
+{% capture text-capture-9 %}
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <node-files value="cross.nod.xml"/>
+        <edge-files value="cross.edg.xml"/>
+        <connection-files value="cross.con.xml"/>
+    </input>
+
+    <output>
+        <output-file value="cross.net.xml"/>
+    </output>
+
+    <report>
+        <verbose value="true"/>
+    </report>
+
+</configuration>
+```
+{% endcapture %}
+{% include custom/toggle-field.html toggle-name="toggle-9" button-text="cross.netccfg" toggle-text=text-capture-9  footer="" %}
+
+{% include tip.html content="Note that both `cross.netccfg` and `cross.netc.cfg` are acceptable suffixes to SUMO's GUI. If you are not using the GUI then this file can have any name as long as you give it correctly to `netconvert`." %}
+
+`cross.netccfg` is very literal with `input` and `output` files specified in the first two sections. The `verbose` option in the `report` section controls the verbose output behaviour of `netconvert`.
+
+On a command line, execute the following command to generate a `cross.net.xml` file.
+
+```
+netconvert -c cross.netccfg
+```
+
+`netconvert` is a SUMO binary just like `sumo` and `sumo-gui`. If you compiled SUMO from source then this together with all other SUMO binaries should be in your `bin` folder, for example in my case this is the `~/sumo-0.29.0/bin/` folder. If you `make install`-ed, then these binaries will be located somewhere like `/usr/local/bin/`. Issue a `which netconvert` command to find out where it is.
+
+{% include tip.html content="The purpose of the `cross.netccfg` file is to make calling `netconvert` earlier for the user. Without `cross.netccfg`, an equivalent result can be achieved by executing 
+<br/><br/>```netconvert -n cross.nod.xml -e cross.nod.xml -x cross.con.xml -o cross.net.xml```<br/><br/>
+on command line." %}
+
+**Further reading** on `netconvert` is available [here](http://sumo.dlr.de/wiki/NETCONVERT).
+
+### Network Summary
+
+Let's summarise the process of generating a network with the following illustration:
+
+![Illustration: Network Summary](https://intelaligent.github.io/tctester/images/learn_traci_b_1.svg)
+
+Our progress through the `data` folder looks like this:
+<pre>
+.
++-- data
+|   +-- <i class="fa fa-check-square"> </i>cross.<b>nod</b>.xml 		<b>nodes, junctions</b>
+|   +-- <i class="fa fa-check-square"> </i>cross.<b>edg</b>.xml 		<b>edges, paths, roads</b>
+|   +-- <i class="fa fa-check-square"> </i>[cross.<b>typ</b>.xml] 		<b>edge types</b>
+|   +-- <i class="fa fa-check-square"> </i>cross.<b>con</b>.xml			<b>connection between edges</b>
+|   +-- <i class="fa fa-check-square"> </i>cross.<b>netccfg</b>			<b>network configuration</b>
+|   +-- <i class="fa fa-check-square"> </i>cross.<b>net</b>.xml 		<b>network</b>
+|   +-- <i class="fa fa-square"> </i>cross.<b>det</b>.xml
+|   +-- <i class="fa fa-square"> </i>cross.<b>rou</b>.xml
+|   +-- <i class="fa fa-square"> </i>cross.<b>out</b>
+|   +-- <i class="fa fa-square"> </i>cross.<b>sumocfg</b>
+...
+</pre>
+
+### On the road with `*.rou.xml`
+
+
+### Equip the road with `*.det.xml`
+
+
+### Start the simulation with SUMO
+
+
+### Simulation Summary
+![Illustration: Network Summary](https://intelaligent.github.io/tctester/images/learn_traci_b_2.svg)
+
+[detectors](http://sumo.dlr.de/wiki/Simulation/Output/Induction_Loops_Detectors_(E1))
+
+[detectors TraCI](http://sumo.dlr.de/wiki/TraCI/Induction_Loop_Value_Retrieval)
+
+[additional files](http://sumo.dlr.de/wiki/SUMO#Format_of_additional_files)
+
+
+I'm still writing...
 
 [1]: http://sumo.dlr.de/wiki/Networks/Building_Networks_from_own_XML-descriptions "XML descriptions"
 
