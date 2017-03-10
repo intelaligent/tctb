@@ -3,7 +3,7 @@ title:  "Learning the TraCI_tls model"
 categories: notes
 author: Bo Gao
 permalink: post-learning-traci-tls.html
-tags: [notes, sumo]
+tags: [notes, sumo, beginner]
 ---
 
 ## Introduction
@@ -15,14 +15,15 @@ This model has the following file structure:
 <pre>
 .
 +-- data
-|   +-- cross.<b>nod</b>.xml 	<b>nodes, junctions</b>
-|   +-- cross.<b>edg</b>.xml 	<b>edges, paths, roads</b>
+|   +-- cross.<b>nod</b>.xml 		<b>nodes, junctions</b>
+|   +-- cross.<b>edg</b>.xml 		<b>edges, paths, roads</b>
+|   +-- [cross.<b>typ</b>.xml] 	<b>edge types</b>
 |   +-- cross.<b>con</b>.xml 	<b></b>
 |   +-- cross.<b>det</b>.xml 	<b></b>
 |   +-- cross.<b>netccfg</b>	<b></b>
 |   +-- cross.<b>net</b>.xml 	<b></b>
 |   +-- cross.<b>rou</b>.xml 	<b></b>
-|   +-- cross.<b>out</b> 	<b>output</b>
+|   +-- cross.<b>out</b> 		<b>output</b>
 |   +-- cross.<b>sumocfg</b>
 +-- embedded
 |   +-- 
@@ -85,9 +86,17 @@ This file defines a list of 9 `node`s, each has a unique `id`, that are "0","1",
 {% endcapture %}
 {% include custom/toggle-field.html toggle-name="toggle-2" button-text="cross.edg.xml" toggle-text=text-capture-2  footer="" %}
 
-From this file we have a bunch of `edge`s, each again has a unique `id` such as "1i" for the edge going `from` `node` "1" `to` `node` "0". To answer our earlier question regarding the "priority" typed `node`s, we see that each `edge` has a `priority` attribute which has numerical values meaning that `edge`s can be compared according to their `priority`. In this model, edges going into the juction (node 0), i.e. "\*i" edges, have a higher priority of 78 than those exiting the junction, i.e. "\*o" edges which have a lower priority of 46. <i class="fa fa-stethoscope"></i>
+From this file we have definition of a bunch of `edge`s, each again has a unique `id` such as "1i" for the edge going `from` `node` "1" `to` `node` "0". To answer our earlier question regarding the `priority` typed `node`s, we see that each `edge` has a `priority` attribute which has numerical values meaning that `edge`s can be compared according to their `priority`s. In this model, edges going into the juction (node 0), i.e. "\*i" edges, have a higher priority of 78 than those exiting the junction, i.e. "\*o" edges which have a lower priority of 46. <i class="fa fa-stethoscope"></i>
 
+Apart from `priority`, we also have `numLanes` and `speed` as attributes for `edge`s. These are easy to understand literally. But this file has lots of repetitive codes, and this is not ideal from a programming point of view. Not to worry though, SUMO has this covered with a `*.typ.xml` file which we will take a look at in the next section.
+
+Before we finish this section, let's quickly summarise what we know about the definitions of nodes and edges so far of TraCI_tls with this illustration:
+
+![Illustration: Nodes and Edges](https://intelaligent.github.io/tctester/images/learn_traci_1.svg)
+
+**Further readings**: On `node` types (extract from [here][1]:):
 {% capture text-capture-3 %}
+
  - `priority`: Vehicles on a low-priority edge have to wait until vehicles on a high-priority edge have passed the junction.
  - `traffic_light`: The junction is controlled by a traffic light (priority rules are used to avoid collisions if conflicting links have green  - light at the same time).
  - `right_before_left`: Vehicles will let vehicles coming from their right side pass.
@@ -102,12 +111,71 @@ From this file we have a bunch of `edge`s, each again has a unique `id` such as 
 {% endcapture %}
 {% include custom/toggle-field.html toggle-name="toggle-3" button-text="all possible node types" toggle-text=text-capture-3  footer="" %}
 
+### Define edge types with a `*.typ.xml` file
 
-To illustrate what we have after the definition of nodes and edges:
+Indeed, there is no `cross.typ.xml` file included in this model, but there could have been one and it would have looked like this:
 
-![Illustration 1](https://intelaligent.github.io/tctester/images/learn_traci_1.svg)
+{% capture text-capture-4 %}
 
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<types>
+   <type id="go_in_to_junction" priority="78" numLanes="1" speed="19.444"/>
+   <type id="come_out_of_junction" priority="46" numLanes="1" speed="11.111"/>
+</types>
+```
+{% endcapture %}
+{% include custom/toggle-field.html toggle-name="toggle-4" button-text="cross.typ.xml" toggle-text=text-capture-4  footer="" %}
 
+With the addition of this `cross.typ.xml` file, the `cross.edg.xml` file can be simplified as:
+
+{% capture text-capture-5 %}
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<edges xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/edges_file.xsd">
+   <edge id="1i" from="1" to="0" type="go_in_to_junction" />
+   <edge id="1o" from="0" to="1" type="come_out_of_junction" />
+
+   <edge id="2i" from="2" to="0" type="go_in_to_junction" />
+   <edge id="2o" from="0" to="2" type="come_out_of_junction" />
+
+   <edge id="3i" from="3" to="0" type="go_in_to_junction" />
+   <edge id="3o" from="0" to="3" type="come_out_of_junction" />
+	...
+
+</edges>
+```
+{% endcapture %}
+{% include custom/toggle-field.html toggle-name="toggle-5" button-text="modified cross.edg.xml" toggle-text=text-capture-5  footer="" %}
+
+Compare this to the original version:
+
+{% include custom/toggle-field.html toggle-name="toggle-6" button-text="original cross.edg.xml" toggle-text=text-capture-2  footer="" %}
+
+You can see that `edge` attributes such as `priority` and `numLanes` have been extracted and grouped together in the `cross.typ.xml` file. This is useful when you have many edges of the same type, and it is also a good practice from a programming point of view.
+
+**Further reading**: To get a full list of the attributes an `edge` may have, consult SUMO's documentation on its `*.typ.xml` file [here](http://sumo.dlr.de/wiki/SUMO_edge_type_file).
+
+### Connect edges with a `*.con.xml` file
+
+We now have 8 edges all associated with `node` 0, a `traffic_light` typed `node`. These edges have yet to be connected together, i.e. rules are yet to be defined to route vehicles from one edge to another. Let's see how this is done in TraCI_tls:
+
+{% capture text-capture-7 %}
+
+```xml
+<?xml version="1.0" encoding="iso-8859-1"?>
+<connections xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/connections_file.xsd">
+	<connection from="1i" to="2o"/>
+	<connection from="2i" to="1o"/>
+	<connection from="3i" to="4o"/>
+	<connection from="4i" to="3o"/>
+</connections>
+```
+{% endcapture %}
+{% include custom/toggle-field.html toggle-name="toggle-7" button-text="cross.con.xml" toggle-text=text-capture-7  footer="" %}
+
+![Illustration: Connections](https://intelaligent.github.io/tctester/images/learn_traci_2.svg)
 
 
 [1]: http://sumo.dlr.de/wiki/Networks/Building_Networks_from_own_XML-descriptions "XML descriptions"
