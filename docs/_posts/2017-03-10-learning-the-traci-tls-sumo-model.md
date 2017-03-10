@@ -100,11 +100,12 @@ From this file we have a bunch of `edge`s, each again has a unique `id` such as 
  - `rail_crossing`: This junction models a rail road crossing. It will allow trains to pass unimpeded and will restrict vehicles via traffic  - signals when a train is approaching..
  - `traffic_light_right_on_red`: The junction is controlled by a traffic light as for type traffic_light. Additionally, right-turning vehicles may drive in any phase whenever it is safe to do so (after stopping once). This behavior is known as right-turn-on-red.
 {% endcapture %}
-{% include custom/toggle-field.html toggle-name="toggle-3" button-text="all possible node types" toggle-text=text-capture-2  footer="See [this document][1] for more on SUMO's XML schema" %}
+{% include custom/toggle-field.html toggle-name="toggle-3" button-text="all possible node types" toggle-text=text-capture-3  footer="" %}
 
-To illustrate, after the definition of `node`s and `edge`s we now have:
 
-![Illustration 1](https://intelaligent.github.io/tctester/images/learn_traci_1.png)
+To illustrate what we have after the definition of nodes and edges:
+
+![Illustration 1](https://intelaligent.github.io/tctester/images/learn_traci_1.svg)
 
 
 
