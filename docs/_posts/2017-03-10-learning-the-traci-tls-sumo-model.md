@@ -8,23 +8,23 @@ tags: [notes, sumo, beginner]
 
 ## Introduction
 
-TraCI\_tls is a simple SUMO model developed as part of SUMO's tutorial on [TraCI](http://sumo.dlr.de/wiki/TraCI). Depite the tutorial material given [here](http://sumo.dlr.de/wiki/Tutorials/TraCI4Traffic_Lights), I found it difficult to understand the model from a software's point of view. Also making connections between SUMO's wiki is also not a simple task. Therefore, I wrote this study note to supplement the TraCI\_tls tutorial. Codes related to this model is hosted [here](https://sourceforge.net/p/sumo/code/HEAD/tree/trunk/sumo/tests/complex/tutorial/traci_tls/).
+TraCI\_tls is a simple SUMO model developed as part of SUMO's tutorial on [TraCI](http://sumo.dlr.de/wiki/TraCI). Despite the tutorial material given [here](http://sumo.dlr.de/wiki/Tutorials/TraCI4Traffic_Lights), it is difficult to understand the model from a software's point of view. The official tutorial also does not give a complete list of the wiki pages that are necessary to help the user to understand the model. Therefore, I wrote this study note to supplement the TraCI\_tls tutorial. Code related to this model is hosted [here](https://sourceforge.net/p/sumo/code/HEAD/tree/trunk/sumo/tests/complex/tutorial/traci_tls/).
 
 First let's take a look at the file structure of TraCI\_tls:
 
 <pre>
 .
 +-- data
-|   +-- cross.<b>nod</b>.xml 		<b>nodes, junctions</b>
-|   +-- cross.<b>edg</b>.xml 		<b>edges, paths, roads</b>
-|   +-- [cross.<b>typ</b>.xml] 	<b>edge types</b>
-|   +-- cross.<b>con</b>.xml 	<b></b>
-|   +-- cross.<b>netccfg</b>	<b></b>
-|   +-- cross.<b>net</b>.xml 	<b></b>
-|   +-- cross.<b>det</b>.xml 	<b></b>
-|   +-- cross.<b>rou</b>.xml 	<b></b>
-|   +-- cross.<b>out</b> 		<b>output</b>
+|   +-- cross.<b>nod</b>.xml
+|   +-- cross.<b>edg</b>.xml
+|   +-- [cross.<b>typ</b>.xml]
+|   +-- cross.<b>con</b>.xml
+|   +-- cross.<b>netccfg</b>
+|   +-- cross.<b>net</b>.xml
+|   +-- cross.<b>det</b>.xml
+|   +-- cross.<b>rou</b>.xml
 |   +-- cross.<b>sumocfg</b>
+|   +-- cross.<b>out</b> 
 +-- embedded
 |   +-- 
 +-- plain
@@ -34,9 +34,9 @@ First let's take a look at the file structure of TraCI\_tls:
 +-- tripinfo.xml
 </pre>
 
-## The `data` folder
+## Building the Road Network
 
-This folder contains all "physical assets" of the model. Let's take a look at what's in this folder.
+Each SUMO model is built on a network of roads, junctions, traffic lights, and other infrastructure items such as induction loop detectors. Compared to the vehicles and their movements, these are the **static** elements of the model. For TraCI, it is good practice to separate these definitions from the Python scripts in a `data` folder. Let's take a look at what's in this folder.
 
 ### Nodes and Edges
 
@@ -209,10 +209,10 @@ Before we dive deeper in the `data` folder, let's take a look at what assets we 
 |   +-- <i class="fa fa-check-square"> </i>cross.<b>con</b>.xml			<b>connection between edges</b>
 |   +-- <i class="fa fa-square"> </i>cross.<b>netccfg</b>
 |   +-- <i class="fa fa-square"> </i>cross.<b>net</b>.xml
-|   +-- <i class="fa fa-square"> </i>cross.<b>det</b>.xml
 |   +-- <i class="fa fa-square"> </i>cross.<b>rou</b>.xml
-|   +-- <i class="fa fa-square"> </i>cross.<b>out</b>
 |   +-- <i class="fa fa-square"> </i>cross.<b>sumocfg</b>
+|   +-- <i class="fa fa-square"> </i>cross.<b>det</b>.xml
+|   +-- <i class="fa fa-square"> </i>cross.<b>out</b>
 ...
 </pre>
 With the 4 checked files, we are now ready to put the `node`s, `edge`s, and `connection`s together to construct a complete "network". In order to do this, first we need to write a network configuration file named `cross.netccfg`:
@@ -260,6 +260,16 @@ on command line." %}
 
 **Further reading** on `netconvert` is available [here](http://sumo.dlr.de/wiki/NETCONVERT).
 
+### Place Detectors with `*.det.xml`
+
+
+{% capture text-capture-10 %}
+```xml
+<e1Detector id="0" lane="4i_0" pos="450" freq="30" file="cross.out" friendlyPos="x"/>
+```
+{% endcapture %}
+{% include custom/toggle-field.html toggle-name="toggle-10" button-text="cross.det.xml" toggle-text=text-capture-10  footer="" %}
+
 ### Network Summary
 
 Let's summarise the process of generating a network with the following illustration:
@@ -276,18 +286,112 @@ Our progress through the `data` folder looks like this:
 |   +-- <i class="fa fa-check-square"> </i>cross.<b>con</b>.xml			<b>connection between edges</b>
 |   +-- <i class="fa fa-check-square"> </i>cross.<b>netccfg</b>			<b>network configuration</b>
 |   +-- <i class="fa fa-check-square"> </i>cross.<b>net</b>.xml 		<b>network</b>
-|   +-- <i class="fa fa-square"> </i>cross.<b>det</b>.xml
+|   +-- <i class="fa fa-check-square"> </i>cross.<b>det</b>.xml 		<b>detectors</b>
 |   +-- <i class="fa fa-square"> </i>cross.<b>rou</b>.xml
-|   +-- <i class="fa fa-square"> </i>cross.<b>out</b>
 |   +-- <i class="fa fa-square"> </i>cross.<b>sumocfg</b>
+|   +-- <i class="fa fa-square"> </i>cross.<b>out</b>
 ...
 </pre>
 
-### On the road with `*.rou.xml`
+Note that cross.det.xml is not part of the `network` for a SUMO model. We will see it in action later on.
+
+## Defining Traffic
+
+Having constructed the road network in the previous section, the stage is now ready for our actors.
+
+### Add Vehicles and Routes with `*.rou.xml`
+
+To get traffic moving on our network, we first need to define `vehicle`s and `route`s for vehicles to travel along. This is done in the `cross.rou.xml` file:
+
+{% capture text-capture-11 %}
+```xml
+<routes>
+        <vType id="typeWE" accel="0.8" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="16.67" guiShape="passenger"/>
+        <vType id="typeNS" accel="0.8" decel="4.5" sigma="0.5" length="7" minGap="3" maxSpeed="25" guiShape="bus"/>
+
+        <route id="right" edges="51o 1i 2o 52i" />
+        <route id="left" edges="52o 2i 1o 51i" />
+        <route id="down" edges="54o 4i 3o 53i" />
+
+        <vehicle id="left_0" type="typeWE" route="left" depart="0" />
+        <vehicle id="left_1" type="typeWE" route="left" depart="2" />
+        <vehicle id="right_2" type="typeWE" route="right" depart="3" />
+        <vehicle id="right_3" type="typeWE" route="right" depart="4" />
+        ...
+
+</routes>
+```
+{% endcapture %}
+{% include custom/toggle-field.html toggle-name="toggle-11" button-text="cross.rou.xml" toggle-text=text-capture-11  footer="" %}
+
+In SUMO, a `route` is a sequence of connected edges. In this file, we see that a route is defined with the `route` label, and its `edges` attribute contains a space-delimited string of edge names giving the sequence of edges a vehicle is to travel on along this route. In this model, as their `id` suggest, we have two routes traveling horizontally in each direction, and one from north (top) to south (bottom). All three routes travel through the junction at node "0".
+
+As well as routes, `vehicle`s and their type `vType`s are also defined in `cross.rou.xml`. In TraCI_tls, we have two types of vehicles: `typeWE` for horizontally traveling vehicles and `typeNS` for vertical traveling vehicles.
+
+We can see that the length of this file is dependent on the number of vehicles included in the simulation and that implies that this file could be significantly longer than the other files in the `data` folder. Therefore, it is preferable to generate this file with a script. This takes us to the `runner.py` file in the root folder of this model.
+
+**Further reading** on the definition of vehicles, vehicle types, and routes is available [here](http://sumo.dlr.de/wiki/Definition_of_Vehicles,_Vehicle_Types,_and_Routes)
+
+### `runner.py`
+
+We now have a script with code logic rather than the XML-based data files. First, to continue our observation from the `cross.rou.xml` file, let's take a look at the `generate_routefile` function:
+
+{% capture text-capture-12 %}
+
+```python
+def generate_routefile():
+    random.seed(42)  # make tests reproducible
+    N = 3600  # number of time steps
+    # demand per second from different directions
+    pWE = 1. / 10
+    pEW = 1. / 11
+    pNS = 1. / 30
+    with open("data/cross.rou.xml", "w") as routes:
+        print("""<routes>
+        <vType id="typeWE" accel="0.8" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="16.67" guiShape="passenger"/>
+        <vType id="typeNS" accel="0.8" decel="4.5" sigma="0.5" length="7" minGap="3" maxSpeed="25" guiShape="bus"/>
+
+        <route id="right" edges="51o 1i 2o 52i" />
+        <route id="left" edges="52o 2i 1o 51i" />
+        <route id="down" edges="54o 4i 3o 53i" />""", file=routes)
+        lastVeh = 0
+        vehNr = 0
+        for i in range(N):
+            if random.uniform(0, 1) < pWE:
+                print('    <vehicle id="right_%i" type="typeWE" route="right" depart="%i" />' % (
+                    vehNr, i), file=routes)
+                vehNr += 1
+                lastVeh = i
+            if random.uniform(0, 1) < pEW:
+                print('    <vehicle id="left_%i" type="typeWE" route="left" depart="%i" />' % (
+                    vehNr, i), file=routes)
+                vehNr += 1
+                lastVeh = i
+            if random.uniform(0, 1) < pNS:
+                print('    <vehicle id="down_%i" type="typeNS" route="down" depart="%i" color="1,0,0"/>' % (
+                    vehNr, i), file=routes)
+                vehNr += 1
+                lastVeh = i
+        print("</routes>", file=routes)
+
+```
+{% endcapture %}
+{% include custom/toggle-field.html toggle-name="toggle-12" button-text="generate_routefile()" toggle-text=text-capture-12  footer="" %}
 
 
-### Equip the road with `*.det.xml`
 
+
+
+traci._inductionloop
+
+http://www.sumo.dlr.de/pydoc/traci._inductionloop.html
+
+```
+getLastStepVehicleNumber(self, loopID)
+getLastStepVehicleNumber(string) -> integer
+ 
+Returns the number of vehicles that were on the named induction loop within the last simulation step.
+```
 
 ### Start the simulation with SUMO
 

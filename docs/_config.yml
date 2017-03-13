@@ -9,7 +9,7 @@ topnav_title: Traffic Control Test Set
 site_title: Traffic Control Test Set Documentation
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-company_name: Intelaligent Transport Research, University of Southampton
+company_name: Intelaligent Transport Research, Transport Systems Catapult's University Partnership Programme with the University of Southampton
 # this appears in the footer
 
 github_editme_path:
@@ -97,6 +97,7 @@ sidebars:
 - t0_sidebar
 - t1_sidebar
 
+future: true
 
 description: "A standard test set for evaluating traffic control technologies."
 # the description is used in the feed.xml file
