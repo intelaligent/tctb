@@ -2,9 +2,13 @@
 title:  "Learning the TraCI_tls model"
 categories: notes
 author: Bo Gao
+sidebar: p1_sidebar
 permalink: post-learning-traci-tls.html
 tags: [notes, sumo, beginner]
 ---
+
+* TOC
+{:toc}
 
 ## Introduction
 

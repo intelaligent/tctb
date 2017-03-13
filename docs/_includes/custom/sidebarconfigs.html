@@ -4,6 +4,9 @@
 {% elsif page.sidebar == "t1_sidebar" %}
 {% assign sidebar = site.data.sidebars.t1_sidebar.entries %}
 
+{% elsif page.sidebar == "p1_sidebar" %}
+{% assign sidebar = site.data.sidebars.p1_sidebar.entries %}
+
 {% else %}
 {% assign sidebar = site.data.sidebars.t1_sidebar.entries %}
 {% endif %}

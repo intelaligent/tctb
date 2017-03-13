@@ -1,0 +1,21 @@
+entries:
+- title: Learning the TraCI_tls Model
+  product: Learning the TraCI_tls Model
+  version: (v1.0)
+  folders:
+
+  - title: Introduction
+    output: web, pdf
+    folderitems:
+    - title: Introduction
+      url: "#introduction"
+      output: web, pdf
+  - title: Building the Road Network
+    output: web, pdf
+    folderitems:
+    - title: Nodes and Edges
+      url: "#nodes-and-edges"
+      output: web, pdf
+    - title: Define Edge Types with a typ.xml file
+      url: "#define-edge-types-with-a-typxml-file"
+      output: web, pdf
