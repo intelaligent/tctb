@@ -1,0 +1,6 @@
+<tlLogic id="4" programID="j1fixedTime" offset="0" type="static">
+   <phase duration="30" state="GGGrrrrrrrrr"/>
+   <phase duration="30" state="rrrGGGrrrrrr"/>
+   <phase duration="30" state="rrrrrrGGGrrr"/>
+   <phase duration="30" state="rrrrrrrrrGGG"/>
+</tlLogic>

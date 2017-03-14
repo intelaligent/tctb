@@ -1,0 +1,11 @@
+<edges>
+	<edge id="1:0" from="1" to="0" type="uMinor" /> 
+	<edge id="2:0" from="2" to="0" type="uMinor" />
+	<edge id="3:0" from="3" to="0" type="uMinor" /> 
+	<edge id="4:0" from="4" to="0" type="uMinor" /> 
+
+	<edge id="0:1" from="0" to="1" type="uMinor" /> 
+	<edge id="0:2" from="0" to="2" type="uMinor" />
+	<edge id="0:3" from="0" to="3" type="uMinor" /> 
+	<edge id="0:4" from="0" to="4" type="uMinor" /> 
+</edges>

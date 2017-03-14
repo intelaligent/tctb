@@ -1,0 +1,17 @@
+<connections>
+    <connection from="1:0" to="0:2" fromLane="0" toLane="0"/>
+    <connection from="1:0" to="0:3" fromLane="0" toLane="0"/>
+	<connection from="1:0" to="0:4" fromLane="0" toLane="0"/>
+    
+    <connection from="2:0" to="0:1" fromLane="0" toLane="0"/>
+    <connection from="2:0" to="0:3" fromLane="0" toLane="0"/>
+	<connection from="2:0" to="0:4" fromLane="0" toLane="0"/>
+    
+    <connection from="3:0" to="0:1" fromLane="0" toLane="0"/>
+    <connection from="3:0" to="0:2" fromLane="0" toLane="0"/>
+	<connection from="3:0" to="0:4" fromLane="0" toLane="0"/>
+
+	<connection from="4:0" to="0:1" fromLane="0" toLane="0"/>
+    <connection from="4:0" to="0:2" fromLane="0" toLane="0"/>
+	<connection from="4:0" to="0:3" fromLane="0" toLane="0"/>
+</connections>
