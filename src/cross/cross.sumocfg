@@ -1,0 +1,31 @@
+<configuration>
+    <input>
+        <net-file value="cross.net.xml"/>
+        <route-files value="cross.rou.xml"/>
+        <gui-settings-file value="gui-settings.cfg"/>
+        <game value="0"/>
+        <start value="1"/>
+        <!--additional-files value="cross.det.xml"/-->
+    </input>
+    <output>
+        <!--<summary-output value="../../results/summary010_000.xml"/>-->
+        <!--tripinfo-output value="../../results/tripinfo010_000.xml"/-->
+        <!--<vehroute-output value="../../results/vehroute010_000.xml"/-->
+        <!--queue-output value="../../results/queuedata010_000.xml"/-->
+    </output>
+    <time>
+        <begin value="0"/>
+        <step-length value="0.01"/>
+    </time>
+    <processing>
+        <!--TURN OFF TELEPORTING-->
+        <time-to-teleport value="-1"/>
+    </processing>
+    <report>
+        <no-step-log value="true"/>
+        <error-log value="logfile.txt"/>
+    </report>
+    <traci_server>
+        <remote-port value="8813"/>
+    </traci_server>
+</configuration>
