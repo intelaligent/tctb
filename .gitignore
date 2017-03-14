@@ -1,3 +1,4 @@
 docs/_site/
 docs/pdf/
 docs/.sass-cache
+*.pyc
