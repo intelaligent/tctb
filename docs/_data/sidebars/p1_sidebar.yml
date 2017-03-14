@@ -1,44 +1,65 @@
 entries:
-- title: Learning TraCI_tls
-  product: Learning TraCI_tls
+- title: 
+  product: 
   version:
   folders:
-
-  - title: Introduction
+  - title: Table of Contents
     output: web, pdf
+    url: /post-learning-traci-tls.html
     folderitems:
+    - title: Learning the TraCI_tls model
+      output: web, pdf
+      url: /post-learning-traci-tls.html
     - title: Introduction
-      url: "post-learning-traci-tls.html#introduction"
+      output: web, pdf
+      url: /post-learning-traci-tls.html#introduction
+    - title: Building the Road Network
+      url: /post-learning-traci-tls.html#building-the-road-network
+      output: web, pdf
+    - title: "&nbsp;&nbsp;&nbsp;&nbsp; Nodes and Edges"
+      url: /post-learning-traci-tls.html#nodes-and-edges
+      output: web, pdf
+    - title: "&nbsp;&nbsp;&nbsp;&nbsp; Define Edge Types"
+      url: /post-learning-traci-tls.html#define-edge-types-with-a-typxml-file
+      output: web, pdf
+    - title: "&nbsp;&nbsp;&nbsp;&nbsp; Connect Edges"
+      url: /post-learning-traci-tls.html#connect-edges-with-a-conxml-file
+      output: web, pdf
+    - title: "&nbsp;&nbsp;&nbsp;&nbsp; Generate Network"
+      url: /post-learning-traci-tls.html#generate-netxml-with-netconvert-and-netccfg
+      output: web, pdf
+    - title: "&nbsp;&nbsp;&nbsp;&nbsp; Place Detectors"
+      url: /post-learning-traci-tls.html#place-detectors-with-detxml
+      output: web, pdf
+    - title: "&nbsp;&nbsp;&nbsp;&nbsp; Network Summary"
+      url: /post-learning-traci-tls.html#network-summary
       output: web, pdf
 
-  - title: Building the Road Network
-    output: web, pdf
-    folderitems:
-    - title: Nodes and Edges
-      url: "post-learning-traci-tls.html#nodes-and-edges"
+    - title: Defining Traffic
       output: web, pdf
-    - title: Define Edge Types
-      url: "post-learning-traci-tls.html#define-edge-types-with-a-typxml-file"
+      url: /post-learning-traci-tls.html#defining-traffic
+    - title: "&nbsp;&nbsp;&nbsp;&nbsp; Vehicles and Routes"
+      url: /post-learning-traci-tls.html#add-vehicles-and-routes-with-rouxml
       output: web, pdf
-    - title: Connect Edges
-      url: "post-learning-traci-tls.html#connect-edges-with-a-conxml-file"
-      output: web, pdf
-    - title: Generate Network
-      url: "post-learning-traci-tls.html#generate-netxml-with-netconvert-and-netccfg"
-      output: web, pdf
-    - title: Place Detectors
-      url: "post-learning-traci-tls.html#place-detectors-with-detxml"
-      output: web, pdf
-    - title: Network Summary
-      url: "post-learning-traci-tls.html#network-summary"
+    - title: "&nbsp;&nbsp;&nbsp;&nbsp; Main Script runner.py"
+      url: /post-learning-traci-tls.html#main-script-runnerpy
       output: web, pdf
 
-  - title: Defining Traffic
-    output: web, pdf
-    folderitems:
-    - title: Vehicles and Routes
-      url: "post-learning-traci-tls.html#add-vehicles-and-routes-with-rouxml"
+    - title: "&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Generate Traffic"
+      url: /post-learning-traci-tls.html#generate-traffic
       output: web, pdf
-    - title: runner.py
-      url: "post-learning-traci-tls.html#runnerpy"
+    - title: "&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Control Traffic"
+      url: /post-learning-traci-tls.html#control-traffic-with-traffic-lights-and-induction-loop
+      output: web, pdf
+    - title: "&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Boilerplates"
+      url: /post-learning-traci-tls.html#boilerplates-of-runnerpy
+      output: web, pdf
+
+
+    - title: Start Simulation
+      url: /post-learning-traci-tls.html#start-the-simulation-in-sumo-gui
+      output: web, pdf
+
+    - title: Simulation Summary
+      url: /post-learning-traci-tls.html#simulation-summary
       output: web, pdf
