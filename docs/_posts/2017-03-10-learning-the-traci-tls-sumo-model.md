@@ -5,6 +5,7 @@ author: Bo Gao
 sidebar: p1_sidebar
 permalink: post-learning-traci-tls.html
 tags: [notes, sumo, beginner]
+toc: true
 ---
 
 * TOC
@@ -274,6 +275,9 @@ on command line." %}
 {% endcapture %}
 {% include custom/toggle-field.html toggle-name="toggle-10" button-text="cross.det.xml" toggle-text=text-capture-10  footer="" %}
 
+**Further reading** on detectors is available [here](http://sumo.dlr.de/wiki/Simulation/Output/Induction_Loops_Detectors_(E1)), [detectors TraCI](http://sumo.dlr.de/wiki/TraCI/Induction_Loop_Value_Retrieval)
+
+
 ### Network Summary
 
 Let's summarise the process of generating a network with the following illustration:
@@ -297,7 +301,7 @@ Our progress through the `data` folder looks like this:
 ...
 </pre>
 
-Note that cross.det.xml is not part of the `network` for a SUMO model. We will see it in action later on.
+Note that `cross.det.xml` is not part of the `network` for a SUMO model. We will see it in action later on.
 
 ## Defining Traffic
 
@@ -338,7 +342,9 @@ We can see that the length of this file is dependent on the number of vehicles i
 
 ### `runner.py`
 
-We now have a script with code logic rather than the XML-based data files. First, to continue our observation from the `cross.rou.xml` file, let's take a look at the `generate_routefile` function:
+We see from `cross.rou.xml` that defining vehicles by hand is a labouring task, so we now introduce `runner.py` which generates traffic information according to given distributions. `runner.py` is a script with code logic rather than the XML-based data files we have seen so far from this model. Let's look at this script by sections.
+
+**First**, to continue our observation from the `cross.rou.xml` file, let's take a look at the `generate_routefile` function:
 
 {% capture text-capture-12 %}
 
@@ -381,9 +387,35 @@ def generate_routefile():
 ```
 {% endcapture %}
 {% include custom/toggle-field.html toggle-name="toggle-12" button-text="generate_routefile()" toggle-text=text-capture-12  footer="" %}
+From this we can see that indeed the `cross.rou.xml` file in the `data` folder is produced by this function. The definitions of the 2 `vType`s and 3 `route`s are written as is. Then, at each time step (`i`/`N`), a vehicle is generated for each of the 3 routes according to its respective probability (`pWE`, `pEW`, `pNS`). The `route` attributes given to these 3 vehicles ensure they are assigned to the correct route, and the `depart` attribute specifies the time step at which they join the network. Additionally, the vehicles traveling from north to south is given the red colour (`color="1,0,0"`) to distinguish themselves.
 
+**Next**, let's take a look at the `run()` function 
 
+{% capture text-capture-13 %}
 
+```python
+def run():
+    """execute the TraCI control loop"""
+    step = 0
+    # we start with phase 2 where EW has green
+    traci.trafficlights.setPhase("0", 2)
+    while traci.simulation.getMinExpectedNumber() > 0:
+        traci.simulationStep()
+        if traci.trafficlights.getPhase("0") == 2:
+            # we are not already switching
+            if traci.inductionloop.getLastStepVehicleNumber("0") > 0:
+                # there is a vehicle from the north, switch
+                traci.trafficlights.setPhase("0", 3)
+            else:
+                # otherwise try to keep green for EW
+                traci.trafficlights.setPhase("0", 2)
+        step += 1
+    traci.close()
+    sys.stdout.flush()
+
+```
+{% endcapture %}
+{% include custom/toggle-field.html toggle-name="toggle-13" button-text="run()" toggle-text=text-capture-13  footer="" %}
 
 
 traci._inductionloop
@@ -400,14 +432,13 @@ Returns the number of vehicles that were on the named induction loop within the 
 ### Start the simulation with SUMO
 
 
+[additional files](http://sumo.dlr.de/wiki/SUMO#Format_of_additional_files)
+
+
 ### Simulation Summary
 ![Illustration: Network Summary](https://intelaligent.github.io/tctester/images/learn_traci_b_2.svg)
 
-[detectors](http://sumo.dlr.de/wiki/Simulation/Output/Induction_Loops_Detectors_(E1))
 
-[detectors TraCI](http://sumo.dlr.de/wiki/TraCI/Induction_Loop_Value_Retrieval)
-
-[additional files](http://sumo.dlr.de/wiki/SUMO#Format_of_additional_files)
 
 
 I'm still writing...

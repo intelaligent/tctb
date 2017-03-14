@@ -14,8 +14,13 @@ This project aims to develop a standard set of microsimulation models and test c
 
 ## Collaboration
 
-The project is being developed jointly by the [Transportation Research Group at the University of Southampton](http://www.southampton.ac.uk/engineering/research/groups/transportation_group.page?) and the [Transport and Planning Department at TU Delft](http://www.citg.tudelft.nl/no_cache/en/about-faculty/departments/transport-and-planning/).
+This project is part of the [Transport Systems Catapult](https://ts.catapult.org.uk/)'s **University Partnership Programme** with the [Transportation Research Group at the University of Southampton](http://www.southampton.ac.uk/engineering/research/groups/transportation_group.page).
 
-The project was originally hosted at [http://tctester.sourceforge.net/](http://tctester.sourceforge.net/).
+![UPP](images/upp_logo.jpg)
+
+## Acknowledgments
+
+ - Some of the models included in this project was hosted at [http://tctester.sourceforge.net/](http://tctester.sourceforge.net/).
+ - References to [SUMO's wiki](http://sumo.dlr.de/wiki/Simulation_of_Urban_MObility_-_Wiki) including tutorials and documentasions are also referenced extensively in our documentations.
 
 {% include links.html %}
