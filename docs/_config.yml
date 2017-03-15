@@ -35,6 +35,8 @@ feedback_subject_line: Traffic Control Test Set
 feedback_email: b.gao@soton.ac.uk
 # used as a contact email for the Feedback link in the top navigation bar
 
+google_analytics: UA-93793615-1
+
 # feedback_disable: true
 # if you uncomment the previous line, the Feedback link gets removed
 
