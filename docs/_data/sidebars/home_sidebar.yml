@@ -2,7 +2,7 @@
 
 
 entries:
-- title: Sidebar
+- title:
   product: 
   version:
   folders:
@@ -20,25 +20,35 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Table of Contents
+  - title: Latest
+    output: web, pdf
+    folderitems:
+    - title: Learning TraCI_tls
+      url: /post-learning-traci-tls.html
+      output: web, pdf
+    - title: Welcome
+      url: /post-welcome.html
+      output: web, pdf
+
+  - title: Test Set
     output: web, pdf
     folderitems:
     - title: Overview
       url: /t1_landing_page.html
       output: web
 
-    - title: "&nbsp;&nbsp;&nbsp;&nbsp; Simple T"
+    - title: Simple T
       url: /t1_simpleT.html
       output: web, pdf
 
-    - title: "&nbsp;&nbsp;&nbsp;&nbsp; Twin T"
+    - title: Twin T
       url: /t1_twinT.html
       output: web, pdf
 
-    - title: "&nbsp;&nbsp;&nbsp;&nbsp; Corridor"
+    - title: Corridor
       url: /t1_corridor.html
       output: web, pdf
 
-    - title: "&nbsp;&nbsp;&nbsp;&nbsp; Manhattan Grid"
+    - title: Manhattan Grid
       url: /t1_mgrid.html
       output: web, pdf
