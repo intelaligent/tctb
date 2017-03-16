@@ -4,8 +4,9 @@ categories: notes
 author: Bo Gao
 sidebar: p1_sidebar
 permalink: post-learning-traci-tls.html
-tags: [notes, sumo, beginner]
+tags: [notes, sumo, traci, tutorial]
 toc: true
+summary: We give introduction to the TraCI tool by studying the TraCI_tls model
 ---
 
 * TOC
@@ -13,7 +14,7 @@ toc: true
 
 ## Introduction
 
-TraCI\_tls is a simple SUMO model developed as part of SUMO's tutorial on [TraCI](http://sumo.dlr.de/wiki/TraCI). Despite the tutorial material given [here](http://sumo.dlr.de/wiki/Tutorials/TraCI4Traffic_Lights), it is difficult to understand the model from a software's point of view. The official tutorial also does not give a complete list of the wiki pages that are necessary to help the user to understand the model. Therefore, I wrote this study note to supplement the TraCI\_tls tutorial. Code related to this model is hosted [here](https://sourceforge.net/p/sumo/code/HEAD/tree/trunk/sumo/tests/complex/tutorial/traci_tls/).
+TraCI\_tls is a simple SUMO model developed as part of SUMO's tutorial on [TraCI](http://sumo.dlr.de/wiki/TraCI). It is a perfect starting point for anyone who is interested in using SUMO and the TraCI tool. After going through the tutorial material given [here](http://sumo.dlr.de/wiki/Tutorials/TraCI4Traffic_Lights), we find that the tutorial material falls short in helping the user to understand the model from a software's point of view. The official tutorial also does not provide a complete list of wiki pages that are essential to help the user to understand the model. Therefore, we provide this study note to supplement the TraCI\_tls tutorial. Source codes of this model is hosted [here](https://sourceforge.net/p/sumo/code/HEAD/tree/trunk/sumo/tests/complex/tutorial/traci_tls/).
 
 First let's take a look at the file structure of TraCI\_tls:
 
@@ -38,6 +39,8 @@ First let's take a look at the file structure of TraCI\_tls:
 +-- runner.py 			<b>main script</b>
 +-- tripinfo.xml
 </pre>
+
+We will begin by going through the files contained in the `data` folder.
 
 ## Building the Road Network
 
