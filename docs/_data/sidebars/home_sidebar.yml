@@ -26,6 +26,9 @@ entries:
     - title: Learning TraCI_tls
       url: /post-learning-traci-tls.html
       output: web, pdf
+    - title: Welcome
+      url: /post-welcome.html
+      output: web, pdf
 
   - title: Test Set
     output: web, pdf

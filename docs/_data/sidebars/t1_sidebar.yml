@@ -4,7 +4,7 @@
 entries:
 - title: Sidebar
   product: 
-  version: (v1.0)
+  version:
   folders:
 
   - title:
@@ -20,25 +20,25 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Using the Test Set
+  - title: Table of Contents
     output: web, pdf
     folderitems:
     - title: Overview
       url: /t1_landing_page.html
       output: web
 
-    - title: Simple T
+    - title: "&nbsp;&nbsp;&nbsp;&nbsp; Simple T"
       url: /t1_simpleT.html
       output: web, pdf
 
-    - title: Twin T
+    - title: "&nbsp;&nbsp;&nbsp;&nbsp; Twin T"
       url: /t1_twinT.html
       output: web, pdf
 
-    - title: Corridor
+    - title: "&nbsp;&nbsp;&nbsp;&nbsp; Corridor"
       url: /t1_corridor.html
       output: web, pdf
 
-    - title: Manhattan Grid
+    - title: "&nbsp;&nbsp;&nbsp;&nbsp; Manhattan Grid"
       url: /t1_mgrid.html
       output: web, pdf
