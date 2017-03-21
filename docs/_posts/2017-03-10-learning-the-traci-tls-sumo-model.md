@@ -1,17 +1,17 @@
 ---
-title:  "Learning TraCI with the TraCI_tls model"
+title:  "A programmer's note on TraCI_tls, TraCI, and SUMO"
 categories: notes
 author: Bo Gao
 sidebar: p1_sidebar
 permalink: post-learning-traci-tls.html
 tags: [notes, sumo, traci, tutorial]
 toc: true
-summary: We give introduction to the TraCI tool by studying the TraCI_tls model
+summary: We give introduction to the TraCI tool by studying the TraCI_tls model.
 ---
 
 ## Introduction
 
-TraCI\_tls is a simple SUMO model developed as part of SUMO's tutorial on [TraCI](http://sumo.dlr.de/wiki/TraCI). It is a perfect starting point for anyone who is interested in using SUMO and the TraCI tool. After going through the tutorial material given [here](http://sumo.dlr.de/wiki/Tutorials/TraCI4Traffic_Lights), we find that the tutorial material falls short in helping the user to understand the model from a software's point of view. The official tutorial also does not provide a complete list of wiki pages that are essential to help the user to understand the model. Therefore, we provide this study note to supplement the TraCI\_tls tutorial. Source codes of this model is hosted [here](https://sourceforge.net/p/sumo/code/HEAD/tree/trunk/sumo/tests/complex/tutorial/traci_tls/).
+TraCI\_tls is a simple SUMO model developed as part of SUMO's tutorial on [TraCI](http://sumo.dlr.de/wiki/TraCI). It is a perfect starting point for anyone who is interested in using SUMO and the TraCI tool. After going through the tutorial material given [here](http://sumo.dlr.de/wiki/Tutorials/TraCI4Traffic_Lights), we find that the tutorial may be improved in terms of helping the user to understand the model from a software's point of view. The official tutorial also does not provide a complete list of wiki pages that are essential to help the user to understand the model. Therefore, we provide this study note to supplement the TraCI\_tls tutorial. Source codes of this model is hosted [here](https://sourceforge.net/p/sumo/code/HEAD/tree/trunk/sumo/tests/complex/tutorial/traci_tls/).
 
 First let's take a look at the file structure of TraCI\_tls:
 
