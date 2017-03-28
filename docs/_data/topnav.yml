@@ -3,19 +3,29 @@
 topnav:
 - title: Topnav
   items:
-    - title: Latest
+    - title: News
       url: /news
+    - title: Test Set Browser
+      url: /t1_model_browser.html
+    - title: Glossary
+      url: /glossary.html
 
 #Topnav dropdowns
 topnav_dropdowns:
 - title: Topnav dropdowns
   folders:
-    - title: Get Started
+    - title: Support
       folderitems:
-        - title: "Learning TraCI with TraCI_tls"
+        - title: "[Tutorial] A Beginner's Guide to SUMO"
+          url: /t0_1.html
+        - title: "[Tutorial] Learning TraCI with TraCI_tls"
           url: /post-learning-traci-tls.html
-        - title: "About the Test Set"
-          url: /t1_landing_page.html
+        - title: "[Tutorial] Getting Started with the Test Set"
+          url: /t1_getting_started.html
+        - title: "[Feature] Network Construction Workflow"
+          url: /t1_network_definition_matrix.html
+        - title: "[Feature] Interactive Network Logo"
+          url: /t1_network_logo.html
     - title: Links
       folderitems:
         - title: Github Repo

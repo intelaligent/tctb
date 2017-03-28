@@ -1,0 +1,135 @@
+<svg width="320" height="220" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onload="init(evt)"  onfocusout="HideTooltip(evt)">
+
+
+	<style>
+	.caption{
+	font-size: 14px;
+	font-family: Georgia, serif;
+	}
+	.tooltip{
+	font-size: 12px;
+	}
+	.tooltip_bg{
+	fill: white;
+	stroke: black;
+	stroke-width: 1;
+	opacity: 0.85;
+	}
+	</style>
+
+	<script type="text/ecmascript">
+	<![CDATA[
+
+	function init(evt)
+	{
+	    if ( window.svgDocument == null )
+	    {
+		svgDocument = evt.target.ownerDocument;
+	    }
+
+	    tooltip = svgDocument.getElementById('tooltip');
+	    tooltip_bg = svgDocument.getElementById('tooltip_bg');
+
+	    tipline = svgDocument.getElementById('tipline');
+
+	}
+
+	function ShowTooltip(evt, mouseovertext)
+	{
+	    tooltip.firstChild.data = mouseovertext;
+	    tooltip.setAttributeNS(null,"visibility","visible");
+
+	    length = tooltip.getComputedTextLength();
+	    //tooltip.firstChild.data = svgDocument.documentElement.clientWidth;
+
+	    tooltip.setAttributeNS(null,"x",evt.clientX+11);
+	    tooltip.setAttributeNS(null,"y",evt.clientY+27);
+
+	    if ( (evt.clientX + length) > svgDocument.documentElement.clientWidth ) {
+	    	tooltip.setAttributeNS(null,"x",evt.clientX - length);
+	    }
+
+	    if ( (evt.clientY + 20) > svgDocument.documentElement.clientHeight ) {
+	    	tooltip.setAttributeNS(null,"y",evt.clientY - 10);
+	    }
+	    
+	    tooltip_bg.setAttributeNS(null,"width",length+8);
+	    tooltip_bg.setAttributeNS(null,"x", tooltip.getAttribute("x") - 4);
+	    tooltip_bg.setAttributeNS(null,"y", tooltip.getAttribute("y") - 12);
+	    tooltip_bg.setAttributeNS(null,"visibility","visibile");
+
+
+	    tipline.setAttributeNS(null, "x1", tooltip.getAttribute("x"));
+	    tipline.setAttributeNS(null, "y1", tooltip.getAttribute("y"));
+
+		tipline.setAttributeNS(null, "x2", evt.clientX);
+	    tipline.setAttributeNS(null, "y2", evt.clientY);
+	    tipline.setAttributeNS(null,"visibility","visibile");
+
+	}
+
+	function HideTooltip(evt)
+	{
+	    tooltip.setAttributeNS(null,"visibility","hidden");
+	    tooltip_bg.setAttributeNS(null,"visibility","hidden");
+	    tipline.setAttributeNS(null,"visibility","hidden");
+	}
+
+	]]>
+	</script>
+
+	<line id="tipline" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
+
+	<line x1="10" y1="60" x2="60" y2="60" style="stroke:black;stroke-width:3" />
+	<line x1="60" y1="10" x2="60" y2="60" style="stroke:black;stroke-width:3" />
+	<line x1="110" y1="60" x2="60" y2="60" style="stroke:black;stroke-width:3" />
+	<line x1="60" y1="110" x2="60" y2="60" style="stroke:black;stroke-width:3" />
+	<line x1="110" y1="60" x2="160" y2="60" style="stroke:black;stroke-width:3" />
+	<line x1="210" y1="60" x2="160" y2="60" style="stroke:black;stroke-width:3" />
+	<line x1="160" y1="110" x2="160" y2="60" style="stroke:black;stroke-width:3" />
+	<line x1="210" y1="60" x2="260" y2="60" style="stroke:black;stroke-width:3" />
+	<line x1="260" y1="10" x2="260" y2="60" style="stroke:black;stroke-width:3" />
+	<line x1="310" y1="60" x2="260" y2="60" style="stroke:black;stroke-width:3" />
+	<line x1="260" y1="110" x2="260" y2="60" style="stroke:black;stroke-width:3" />
+	<line x1="210" y1="110" x2="260" y2="60" style="stroke:black;stroke-width:3" />
+	<line x1="110" y1="160" x2="160" y2="160" style="stroke:black;stroke-width:3" />
+	<line x1="160" y1="110" x2="160" y2="160" style="stroke:black;stroke-width:3" />
+	<line x1="210" y1="160" x2="160" y2="160" style="stroke:black;stroke-width:3" />
+	<line x1="160" y1="210" x2="160" y2="160" style="stroke:black;stroke-width:3" />
+	<line x1="210" y1="110" x2="160" y2="160" style="stroke:black;stroke-width:3" />
+	<line x1="210" y1="160" x2="260" y2="160" style="stroke:black;stroke-width:3" />
+	<line x1="260" y1="110" x2="260" y2="160" style="stroke:black;stroke-width:3" />
+	<line x1="310" y1="160" x2="260" y2="160" style="stroke:black;stroke-width:3" />
+	<line x1="260" y1="210" x2="260" y2="160" style="stroke:black;stroke-width:3" />
+	<rect x="55" y="55" rx="2" ry="2" width="10" height="10" style="fill:white;stroke:black;stroke-width:1;fill-opacity:0.6" onmousemove="ShowTooltip(evt, '1_1_0')"  />
+	<text x="60" y="62" style="fill:black;font-family:monospace;font-size:10px" text-anchor="middle" onmousemove="ShowTooltip(evt, '1_1_0')" >p</text>
+	<rect x="5" y="55" rx="2" ry="2" width="10" height="10" style="fill:black;stroke:black;stroke-width:1;fill-opacity:0.6" onmousemove="ShowTooltip(evt, '1_1_1')"  />
+	<rect x="55" y="5" rx="2" ry="2" width="10" height="10" style="fill:black;stroke:black;stroke-width:1;fill-opacity:0.6" onmousemove="ShowTooltip(evt, '1_1_3')"  />
+	<rect x="105" y="55" rx="2" ry="2" width="10" height="10" style="fill:black;stroke:black;stroke-width:1;fill-opacity:0.6" onmousemove="ShowTooltip(evt, '1_1_5')"  />
+	<rect x="55" y="105" rx="2" ry="2" width="10" height="10" style="fill:black;stroke:black;stroke-width:1;fill-opacity:0.6" onmousemove="ShowTooltip(evt, '1_1_7')"  />
+	<rect x="155" y="55" rx="2" ry="2" width="10" height="10" style="fill:white;stroke:black;stroke-width:1;fill-opacity:0.6" onmousemove="ShowTooltip(evt, '2_1_0')"  />
+	<text x="160" y="62" style="fill:black;font-family:monospace;font-size:10px" text-anchor="middle" onmousemove="ShowTooltip(evt, '2_1_0')" >p</text>
+	<rect x="205" y="55" rx="2" ry="2" width="10" height="10" style="fill:black;stroke:black;stroke-width:1;fill-opacity:0.6" onmousemove="ShowTooltip(evt, '2_1_5')"  />
+	<rect x="155" y="105" rx="2" ry="2" width="10" height="10" style="fill:black;stroke:black;stroke-width:1;fill-opacity:0.6" onmousemove="ShowTooltip(evt, '2_1_7')"  />
+	<rect x="255" y="55" rx="2" ry="2" width="10" height="10" style="fill:white;stroke:black;stroke-width:1;fill-opacity:0.6" onmousemove="ShowTooltip(evt, '3_1_0')"  />
+	<text x="260" y="62" style="fill:black;font-family:monospace;font-size:10px" text-anchor="middle" onmousemove="ShowTooltip(evt, '3_1_0')" >p</text>
+	<rect x="255" y="5" rx="2" ry="2" width="10" height="10" style="fill:black;stroke:black;stroke-width:1;fill-opacity:0.6" onmousemove="ShowTooltip(evt, '3_1_3')"  />
+	<rect x="305" y="55" rx="2" ry="2" width="10" height="10" style="fill:black;stroke:black;stroke-width:1;fill-opacity:0.6" onmousemove="ShowTooltip(evt, '3_1_5')"  />
+	<rect x="255" y="105" rx="2" ry="2" width="10" height="10" style="fill:black;stroke:black;stroke-width:1;fill-opacity:0.6" onmousemove="ShowTooltip(evt, '3_1_7')"  />
+	<rect x="205" y="105" rx="2" ry="2" width="10" height="10" style="fill:black;stroke:black;stroke-width:1;fill-opacity:0.6" onmousemove="ShowTooltip(evt, '3_1_8')"  />
+	<rect x="155" y="155" rx="2" ry="2" width="10" height="10" style="fill:white;stroke:black;stroke-width:1;fill-opacity:0.6" onmousemove="ShowTooltip(evt, '2_2_0')"  />
+	<text x="160" y="162" style="fill:black;font-family:monospace;font-size:10px" text-anchor="middle" onmousemove="ShowTooltip(evt, '2_2_0')" >p</text>
+	<rect x="105" y="155" rx="2" ry="2" width="10" height="10" style="fill:black;stroke:black;stroke-width:1;fill-opacity:0.6" onmousemove="ShowTooltip(evt, '2_2_1')"  />
+	<rect x="205" y="155" rx="2" ry="2" width="10" height="10" style="fill:black;stroke:black;stroke-width:1;fill-opacity:0.6" onmousemove="ShowTooltip(evt, '2_2_5')"  />
+	<rect x="155" y="205" rx="2" ry="2" width="10" height="10" style="fill:black;stroke:black;stroke-width:1;fill-opacity:0.6" onmousemove="ShowTooltip(evt, '2_2_7')"  />
+	<rect x="255" y="155" rx="2" ry="2" width="10" height="10" style="fill:white;stroke:black;stroke-width:1;fill-opacity:0.6" onmousemove="ShowTooltip(evt, '3_2_0')"  />
+	<text x="260" y="162" style="fill:black;font-family:monospace;font-size:10px" text-anchor="middle" onmousemove="ShowTooltip(evt, '3_2_0')" >p</text>
+	<rect x="305" y="155" rx="2" ry="2" width="10" height="10" style="fill:black;stroke:black;stroke-width:1;fill-opacity:0.6" onmousemove="ShowTooltip(evt, '3_2_5')"  />
+	<rect x="255" y="205" rx="2" ry="2" width="10" height="10" style="fill:black;stroke:black;stroke-width:1;fill-opacity:0.6" onmousemove="ShowTooltip(evt, '3_2_7')"  />
+
+
+	<rect class="tooltip_bg" id="tooltip_bg" x="0" y="0" rx="4" ry="4" width="55" height="17" visibility="hidden"/>
+	<text class="tooltip" id="tooltip" x="0" y="0" visibility="hidden">Tooltip</text>
+
+
+</svg>

@@ -20,7 +20,7 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Latest
+  - title: Latest Updates
     output: web, pdf
     folderitems:
     - title: Learning TraCI_tls
@@ -30,25 +30,25 @@ entries:
       url: /post-welcome.html
       output: web, pdf
 
-  - title: Test Set
+  - title: Documentations
     output: web, pdf
     folderitems:
-    - title: Overview
-      url: /t1_landing_page.html
-      output: web
-
-    - title: Simple T
-      url: /t1_simpleT.html
+    - title: Project Background
+      url: /index.html
       output: web, pdf
 
-    - title: Twin T
-      url: /t1_twinT.html
+    - title: Getting Started
+      url: /t1_getting_started.html
       output: web, pdf
 
-    - title: Corridor
-      url: /t1_corridor.html
+    - title: Features
+      url: /t1_network_definition_matrix.html
       output: web, pdf
 
-    - title: Manhattan Grid
-      url: /t1_mgrid.html
+    - title: "&nbsp;&nbsp;Network Definition Matrix"
+      url: /t1_network_definition_matrix.html
+      output: web, pdf
+
+    - title: "&nbsp;&nbsp;Interactive Network Logo"
+      url: /t1_network_logo.html
       output: web, pdf

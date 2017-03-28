@@ -1,11 +1,44 @@
-jekyll_platform: "Jekyll is a static site generator that builds sites using most modern web technologies."
+glossary:
+  - code_name: its
+    display_name: "ITS / Intelligent Transportation Systems"
+    description: "Intelligent Transportation Systems"
 
-fractious: "Like a little mischevious child, full of annoying and constant trouble."
+  - code_name: interactive_network_logo
+    display_name: "INL / Interactive Network Logo"
+    link: "/t1_network_logo.html"
+    description: "A svg-formatted image file giving the user direct and interactive access to the network structure."
 
-gratuitous: "Something that is unwarranted and uncouth, like the social equivalent of a flagrant foul."
+  - code_name: network_construction_workflow
+    display_name: "Network Construction Workflow"
+    link: "/t1_network_definition_matrix.html"
+    description: "A series of actions that produces a network model."
 
-haughty: "Proud and flaunting it. Holding your head high up like a snooty, too-good-for-everything rich person."
+  - code_name: network_definition_matrix
+    display_name: "NDM / Network Definition Matrix"
+    link: "/t1_network_definition_matrix.html"
+    description: "A human-editable grid-based network definition format."
 
-impertinent: "Someone acting rude and insensitive to others."
+  - code_name: network_profile_unit
+    display_name: "NPU / Network Profile Unit"
+    link: "/t1_network_definition_matrix.html#network-profile-unit"
+    description: "An eight-directional unit which is the smallest building block for the construction of network models."
 
-intrepid: "Brave and courageous especially in a difficult, dangerous situation."
+  - code_name: sumo
+    display_name: SUMO
+    link: "http://sumo.dlr.de/wiki/Simulation_of_Urban_MObility_-_Wiki"
+    description: '"Simulation of Urban MObility (SUMO) is an open source, highly portable, microscopic and continuous road traffic simulation package designed to handle large road networks." - '
+
+  - code_name: trg
+    display_name: TRG / Transportation Research Group
+    link: "http://www.southampton.ac.uk/engineering/research/groups/transportation_group.page?"
+    description: "The Transportation Research Group of the University of Southampton's Faculty of Engineering and the Environment."
+
+  - code_name: tsc
+    display_name: TSC / Transport Systems Catapult
+    link: "https://ts.catapult.org.uk/"
+    description: "The Transport Systems Catapult is one of eleven elite technology and innovation centres established and overseen by the UK’s innovation agency, Innovate UK."
+
+  - code_name: uos
+    display_name: UoS / University of Southampton
+    link: "http://www.southampton.ac.uk/engineering/research/groups/transportation_group.page?"
+    description: "University of Southampton"
