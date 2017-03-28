@@ -1,0 +1,180 @@
+---
+title: "Browse the Test Set"
+keywords: tool
+sidebar: t1_sidebar
+toc: false
+permalink: t1_model_browser.html
+folder: tut1
+datatable: true
+---
+
+<script>
+$(document).ready(function(){
+
+    // $('table.display').DataTable( {
+    //     paging: true,
+    //     stateSave: true,
+    //     aaSorting: [[2, 'asc']],
+    //     ordering: true
+    //     searching: true
+    // }
+    //     );
+
+    $("#sampleTable").dataTable({
+        aaSorting: [[0, 'desc']], //asc. desc
+        searching: true,
+        // // stateSave: false,
+        // // paging: true,
+        // bPaginate: false,
+        // bFilter: false,
+        // bInfo: false,
+        // bSortable: true,
+        // bRetrieve: true,
+        aoColumnDefs: [
+            { "aTargets": [ 0 ], "bSortable": true },
+            { "aTargets": [ 1 ], "bSortable": false },
+            { "aTargets": [ 2 ], "bSortable": true },
+            { "aTargets": [ 3 ], "bSortable": true },
+            { "aTargets": [ 4 ], "bSortable": false },
+            { "aTargets": [ 5 ], "bSortable": false }
+        ]
+    }); 
+});
+</script>
+
+    <!-- Tabs -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">Test Sets</h2>
+        </div>
+        <div class="col-lg-12">
+            <p>The test set contains a number of simulation models of different road networks. Each model contains at least one signalised junction to be controlled. All of the test models currently use the open source microsimulator SUMO as the simulation platform.</p>
+
+
+<div class="table">
+<table id="sampleTable" class="display" width="100%">
+   <thead>
+      <tr>
+         <th>Model ID</th>
+         <th>Description</th>
+         <th>Dimension</th>
+         <th>Complexity</th>
+         <th>view</th>
+         <th>download</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>1x1-01</td>
+         <td align="center">{% include svg.html file="models/tctester-model_libs-1x1-01-data-model.svg" %}
+         </td>
+         <td>1x1</td>
+         <td>Simple</td>
+         <td>src</td>
+         <td>.tar.gz</td>
+      </tr>
+      <tr>
+         <td>1x1-02</td>
+         <td align="center">{% include svg.html file="models/tctester-model_libs-1x1-02-data-model.svg" %}
+         </td>
+         <td>1x1</td>
+         <td>Simple</td>
+         <td>src</td>
+         <td>.tar.gz</td>
+      </tr>
+      <tr>
+         <td>1x1-03</td>
+         <td align="center">{% include svg.html file="models/tctester-model_libs-1x1-03-data-model.svg" %}
+         </td>
+         <td>1x1</td>
+         <td>Simple</td>
+         <td>src</td>
+         <td>.tar.gz</td>
+      </tr>
+      <tr>
+         <td>1x1-04</td>
+         <td align="center">{% include svg.html file="models/tctester-model_libs-1x1-04-data-model.svg" %}
+         </td>
+         <td>1x1</td>
+         <td>Simple</td>
+         <td>src</td>
+         <td>.tar.gz</td>
+      </tr>
+      <tr>
+         <td>1x2-01</td>
+         <td align="center">{% include svg.html file="models/tctester-model_libs-1x2-01-data-model.svg" %}
+         </td>
+         <td>1x2</td>
+         <td>Simple</td>
+         <td>src</td>
+         <td>.tar.gz</td>
+      </tr>
+      <tr>
+         <td>1x2-02</td>
+         <td align="center">{% include svg.html file="models/tctester-model_libs-1x2-02-data-model.svg" %}
+         </td>
+         <td>1x2</td>
+         <td>Simple</td>
+         <td>src</td>
+         <td>.tar.gz</td>
+      </tr>
+      <tr>
+         <td>1x2-03</td>
+         <td align="center">{% include svg.html file="models/tctester-model_libs-1x2-03-data-model.svg" %}
+         </td>
+         <td>1x2</td>
+         <td>Simple</td>
+         <td>src</td>
+         <td>.tar.gz</td>
+      </tr>
+      <tr>
+         <td>1x2-04</td>
+         <td align="center">{% include svg.html file="models/tctester-model_libs-1x2-04-data-model.svg" %}
+         </td>
+         <td>1x2</td>
+         <td>Simple</td>
+         <td>src</td>
+         <td>.tar.gz</td>
+      </tr>
+      <tr>
+         <td>1x2-05</td>
+         <td align="center">{% include svg.html file="models/tctester-model_libs-1x2-05-data-model.svg" %}
+         </td>
+         <td>1x2</td>
+         <td>Simple</td>
+         <td>src</td>
+         <td>.tar.gz</td>
+      </tr>
+      <tr>
+         <td>1x2-06</td>
+         <td align="center">{% include svg.html file="models/tctester-model_libs-1x2-06-data-model.svg" %}
+         </td>
+         <td>1x2</td>
+         <td>Simple</td>
+         <td>src</td>
+         <td>.tar.gz</td>
+      </tr>
+      <tr>
+         <td>1x2-07</td>
+         <td align="center">{% include svg.html file="models/tctester-model_libs-1x2-07-data-model.svg" %}
+         </td>
+         <td>1x2</td>
+         <td>Simple</td>
+         <td>src</td>
+         <td>.tar.gz</td>
+      </tr>
+      <tr>
+         <td>1x2-08</td>
+         <td align="center">{% include svg.html file="models/tctester-model_libs-1x2-08-data-model.svg" %}
+         </td>
+         <td>1x2</td>
+         <td>Simple</td>
+         <td>src</td>
+         <td>.tar.gz</td>
+      </tr>
+   </tbody>
+</table>
+</div>
+
+        </div>
+    </div>
