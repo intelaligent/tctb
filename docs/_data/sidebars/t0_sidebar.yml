@@ -7,9 +7,21 @@ entries:
   version: (v1.0)
   folders:
 
-  - title: Introduction to SUMO
+  - title: A Beginner's Guide to SUMO
     output: web, pdf
     folderitems:
-    - title: Overview
-      url: /t0_landing_page.html
-      output: web
+    - title: Introduction to SUMO
+      url: /t0_1.html
+      output: web, pdf
+    - title: Nodes and Edges
+      url: /t0_2.html
+      output: web, pdf
+    - title: Vehicles and Routes
+      url: /t0_3.html
+      output: web, pdf
+    - title: Traffic Lights
+      url: /t0_4.html
+      output: web, pdf
+    - title: Outputs
+      url: /t0_5.html
+      output: web, pdf
