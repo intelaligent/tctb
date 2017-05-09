@@ -1,5 +1,5 @@
 ---
-title:  "A programmer's note on TraCI_tls, TraCI, and SUMO"
+title:  "A Programmer's Note on TraCI_tls, TraCI, and SUMO"
 categories: notes
 author: Bo Gao
 sidebar: p1_sidebar
@@ -584,7 +584,7 @@ Adjust the "Delays" parameter and start the simulation by clicking on the <i cla
 
 ## Simulation Summary
 Finally, we summarise the process and structure of TraCI_tls with this illustration:
-![Illustration: Network Summary](https://intelaligent.github.io/tctester/images/learn_traci_b_2.svg)
+![Illustration: Network Summary](images/learn_traci_b_2.svg)
 
 
 

@@ -1,12 +1,12 @@
-repository: intelaligent/tctester
+repository: intelaligent/tctb
 
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: Traffic Control Test Set
+topnav_title: Traffic Control Test Bed
 # this appears on the top navigation bar next to the home button
 
-site_title: Traffic Control Test Set Documentation
+site_title: Traffic Control Test Bed Documentation
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: Intelaligent, Transport Systems Catapult's University Partnership Programme with the University of Southampton
@@ -30,7 +30,7 @@ exclude:
   - .gitignore
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_subject_line: Traffic Control Test Set
+feedback_subject_line: Traffic Control Test Bed
 
 feedback_email: b.gao@soton.ac.uk
 # used as a contact email for the Feedback link in the top navigation bar
@@ -102,8 +102,8 @@ sidebars:
 
 future: true
 
-description: "A standard test set for evaluating traffic control technologies."
+description: "A standard test bed for evaluating traffic control technologies."
 # the description is used in the feed.xml file
 
 # needed for sitemap.xml file only
-url: http://idratherbewriting.com
+url:

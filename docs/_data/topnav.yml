@@ -22,14 +22,14 @@ topnav_dropdowns:
           url: /post-learning-traci-tls.html
         - title: "[Tutorial] Getting Started with the Test Set"
           url: /t1_getting_started.html
-        - title: "[Feature] Network Construction Workflow"
+        - title: "[Feature] Network Definition Matrix"
           url: /t1_network_definition_matrix.html
         - title: "[Feature] Interactive Network Logo"
           url: /t1_network_logo.html
     - title: Links
       folderitems:
         - title: Github Repo
-          external_url: https://github.com/intelaligent/tctester
+          external_url: https://github.com/intelaligent/tctb
         - title: Transport Research Group
           external_url: http://www.southampton.ac.uk/engineering/research/groups/transportation_group.page?
         - title: Transport Systems Catapult

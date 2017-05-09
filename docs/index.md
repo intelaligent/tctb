@@ -1,11 +1,11 @@
 ---
-title: The Traffic Control Test Set Project
+title: The Traffic Control Test Bed Project
 keywords: homepage
 tags: [index]
 sidebar: home_sidebar
 permalink: index.html
 toc: false
-summary: Developing a standard test set for evaluating traffic control technologies.
+summary: Developing a standard platform for evaluating and benchmarking traffic control technologies.
 ---
 
 ## Objective
