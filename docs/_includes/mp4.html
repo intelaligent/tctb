@@ -1,3 +1,28 @@
 <video width="{{include.width}}" height="{{include.height}}" controls>
-  <source src="images/{{include.file}}" type="video/mp4">
+  <source src="images/{{include.file}}.mp4" type="video/mp4">
 </video>
+
+<!-- "Video For Everybody" v0.4.1 by Kroc Camen of Camen Design <camendesign.com/code/video_for_everybody>
+     =================================================================================================================== -->
+<!-- first try HTML5 playback: if serving as XML, expand `controls` to `controls="controls"` and autoplay likewise       -->
+<!-- warning: playback does not work on iPad/iPhone if you include the poster attribute! fixed in iOS4.0                 -->
+<video width="{{include.width}}" height="{{include.height}}" controls>
+    <!-- MP4 must be first for iPad! -->
+    <source src="images/{{include.file}}.mp4" type="video/mp4" ><!-- WebKit video    -->
+    <source src="images/{{include.file}}.webm" type="video/webm" /><!-- Chrome / Newest versions of Firefox and Opera -->
+    <source src="images/{{include.file}}.ogv" type="video/ogg" /><!-- Firefox / Opera -->
+    <!-- fallback to Flash: -->
+    <object width="640" height="384" type="application/x-shockwave-flash" data="images/{{include.file}}.swf">
+        <!-- Firefox uses the `data` attribute above, IE/Safari uses the param below -->
+        <param name="movie" value="images/{{include.file}}.swf" />
+        <param name="flashvars" value="image=images/{{include.file}}.jpg&amp;file=images/{{include.file}}.mp4" />
+        <!-- fallback image. note the title field below, put the title of the video there -->
+        <img src="images/{{include.file}}.jpg" width="{{include.width}}" height="{{include.height}}" alt="{{include.title}}"
+             title="No video playback capabilities, please download the video below" />
+    </object>
+</video>
+<!-- you *must* offer a download link as they may be able to play the file locally. customise this bit all you want -->
+<p> <strong>Download Video:</strong>
+    Closed Format:  <a href="images/{{include.file}}.mp4">"MP4"</a>
+    Open Format:    <a href="images/{{include.file}}.ogv">"OGG"</a>
+</p>
