@@ -6,7 +6,7 @@
      =================================================================================================================== -->
 <!-- first try HTML5 playback: if serving as XML, expand `controls` to `controls="controls"` and autoplay likewise       -->
 <!-- warning: playback does not work on iPad/iPhone if you include the poster attribute! fixed in iOS4.0                 -->
-<video width="{{include.width}}" height="{{include.height}}" controls>
+<video width="{{include.width}}" height="{{include.height}}" controls preload="none">
     <!-- MP4 must be first for iPad! -->
     <source src="images/{{include.file}}.mp4" type="video/mp4" ><!-- WebKit video    -->
     <source src="images/{{include.file}}.webm" type="video/webm" /><!-- Chrome / Newest versions of Firefox and Opera -->
