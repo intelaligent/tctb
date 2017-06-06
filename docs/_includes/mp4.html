@@ -7,18 +7,9 @@
     <source src="images/{{include.file}}.mp4" type="video/mp4" ><!-- WebKit video    -->
     <source src="images/{{include.file}}.webm" type="video/webm" /><!-- Chrome / Newest versions of Firefox and Opera -->
     <source src="images/{{include.file}}.ogv" type="video/ogg" /><!-- Firefox / Opera -->
-    <!-- fallback to Flash: -->
-    <object width="640" height="384" type="application/x-shockwave-flash" data="player.swf">
-        <!-- Firefox uses the `data` attribute above, IE/Safari uses the param below -->
-        <param name="movie" value="player.swf" />
-        <param name="flashvars" value="image=images/{{include.file}}.jpg&amp;file=images/{{include.file}}.mp4" />
-        <!-- fallback image. note the title field below, put the title of the video there -->
-        <img src="images/{{include.file}}.jpg" width="{{include.width}}" height="{{include.height}}" alt="{{include.title}}"
-             title="No video playback capabilities, please download the video below" />
-    </object>
+    <!-- no fallback to Flash: -->
 </video>
 <!-- you *must* offer a download link as they may be able to play the file locally. customise this bit all you want -->
 <p> <strong>Download Video:</strong>
-    Closed Format:  <a href="images/{{include.file}}.mp4">"MP4"</a>
-    Open Format:    <a href="images/{{include.file}}.ogv">"OGG"</a>
+    <a href="images/{{include.file}}.mp4">"MP4"</a>
 </p>
