@@ -10,7 +10,7 @@ summary: Developing a standard platform for evaluating and benchmarking traffic 
 
 <span class="label label-success">News</span>
 [Come and join us at TSC IMAGINE 2017](post-imagine-demo.html)
-{% include mp4.html file="videos/IMAGINE_demo" width="854" height="480" caption="This video is part of our exhibition at IMAGINE festival at TSC 7th & 8th June 2017." %}
+{% include mp4.html file="videos/Screencast_UPP_demo" width="854" height="480" caption="This video is part of our exhibition at IMAGINE festival at TSC 7th & 8th June 2017." %}
 <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Objective
