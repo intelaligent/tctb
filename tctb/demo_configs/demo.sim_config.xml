@@ -4,12 +4,12 @@ Demo simulation configuration
 Intersection Control Test Bed
 -->
 <simulation steps="2000">
-    <scenario name="5x3/01 default">
+    <scenario name="2x1/03 default">
         <network path="../model_libs/2x1/03" />
         <demand type="randomTrips"/>
         <agent type="none" />
     </scenario>
-    <scenario name="5x3/01 coordinated">
+    <scenario name="2x1/03 coordinated">
         <network path="../model_libs/2x1/03" />
         <demand type="randomTrips"/>
         <agent type="tls_sumo_coordinator" />
