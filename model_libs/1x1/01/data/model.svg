@@ -1,84 +1,84 @@
 <svg width="120" height="120" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onload="init(evt)"  onfocusout="HideTooltip(evt)">
 
 
-	<style>
-	.caption{
-	font-size: 14px;
-	font-family: Georgia, serif;
-	}
-	.tooltip{
-	font-size: 12px;
-	}
-	.tooltip_bg{
-	fill: white;
-	stroke: black;
-	stroke-width: 1;
-	opacity: 0.85;
-	}
-	</style>
+    <style>
+    .caption{
+    font-size: 14px;
+    font-family: Georgia, serif;
+    }
+    .tooltip{
+    font-size: 12px;
+    }
+    .tooltip_bg{
+    fill: white;
+    stroke: black;
+    stroke-width: 1;
+    opacity: 0.85;
+    }
+    </style>
 
-	<script type="text/ecmascript">
-	<![CDATA[
+    <script type="text/ecmascript">
+    <![CDATA[
 
-	function init(evt)
-	{
-	    if ( window.svgDocument == null )
-	    {
-		svgDocument = evt.target.ownerDocument;
-	    }
+    function init(evt)
+    {
+        if ( window.svgDocument == null )
+        {
+        svgDocument = evt.target.ownerDocument;
+        }
 
-	    tooltip = svgDocument.getElementById('tooltip');
-	    tooltip_bg = svgDocument.getElementById('tooltip_bg');
+        tooltip = svgDocument.getElementById('tooltip');
+        tooltip_bg = svgDocument.getElementById('tooltip_bg');
 
-	    tipline = svgDocument.getElementById('tipline');
+        tipline = svgDocument.getElementById('tipline');
 
-	}
+    }
 
-	function ShowTooltip(evt, mouseovertext)
-	{
-	    tooltip.firstChild.data = mouseovertext;
-	    tooltip.setAttributeNS(null,"visibility","visible");
+    function ShowTooltip(evt, mouseovertext)
+    {
+        tooltip.firstChild.data = mouseovertext;
+        tooltip.setAttributeNS(null,"visibility","visible");
 
-	    length = tooltip.getComputedTextLength();
-	    //tooltip.firstChild.data = svgDocument.documentElement.clientWidth;
+        length = tooltip.getComputedTextLength();
+        //tooltip.firstChild.data = svgDocument.documentElement.clientWidth;
 
-	    tooltip.setAttributeNS(null,"x",evt.clientX+11);
-	    tooltip.setAttributeNS(null,"y",evt.clientY+27);
+        tooltip.setAttributeNS(null,"x",evt.clientX+11);
+        tooltip.setAttributeNS(null,"y",evt.clientY+27);
 
-	    if ( (evt.clientX + length) > svgDocument.documentElement.clientWidth ) {
-	    	tooltip.setAttributeNS(null,"x",evt.clientX - length);
-	    }
+        if ( (evt.clientX + length) > svgDocument.documentElement.clientWidth ) {
+            tooltip.setAttributeNS(null,"x",evt.clientX - length);
+        }
 
-	    if ( (evt.clientY + 20) > svgDocument.documentElement.clientHeight ) {
-	    	tooltip.setAttributeNS(null,"y",evt.clientY - 10);
-	    }
-	    
-	    tooltip_bg.setAttributeNS(null,"width",length+8);
-	    tooltip_bg.setAttributeNS(null,"x", tooltip.getAttribute("x") - 4);
-	    tooltip_bg.setAttributeNS(null,"y", tooltip.getAttribute("y") - 12);
-	    tooltip_bg.setAttributeNS(null,"visibility","visibile");
+        if ( (evt.clientY + 20) > svgDocument.documentElement.clientHeight ) {
+            tooltip.setAttributeNS(null,"y",evt.clientY - 10);
+        }
+        
+        tooltip_bg.setAttributeNS(null,"width",length+8);
+        tooltip_bg.setAttributeNS(null,"x", tooltip.getAttribute("x") - 4);
+        tooltip_bg.setAttributeNS(null,"y", tooltip.getAttribute("y") - 12);
+        tooltip_bg.setAttributeNS(null,"visibility","visibile");
 
 
-	    tipline.setAttributeNS(null, "x1", tooltip.getAttribute("x"));
-	    tipline.setAttributeNS(null, "y1", tooltip.getAttribute("y"));
+        tipline.setAttributeNS(null, "x1", tooltip.getAttribute("x"));
+        tipline.setAttributeNS(null, "y1", tooltip.getAttribute("y"));
 
-		tipline.setAttributeNS(null, "x2", evt.clientX);
-	    tipline.setAttributeNS(null, "y2", evt.clientY);
-	    tipline.setAttributeNS(null,"visibility","visibile");
+        tipline.setAttributeNS(null, "x2", evt.clientX);
+        tipline.setAttributeNS(null, "y2", evt.clientY);
+        tipline.setAttributeNS(null,"visibility","visibile");
 
-	}
+    }
 
-	function HideTooltip(evt)
-	{
-	    tooltip.setAttributeNS(null,"visibility","hidden");
-	    tooltip_bg.setAttributeNS(null,"visibility","hidden");
-	    tipline.setAttributeNS(null,"visibility","hidden");
-	}
+    function HideTooltip(evt)
+    {
+        tooltip.setAttributeNS(null,"visibility","hidden");
+        tooltip_bg.setAttributeNS(null,"visibility","hidden");
+        tipline.setAttributeNS(null,"visibility","hidden");
+    }
 
-	]]>
-	</script>
+    ]]>
+    </script>
 
-	<line id="tipline" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
+    <line id="tipline" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
 
 	<line x1="10" y1="60" x2="60" y2="60" style="stroke:black;stroke-width:3" />
 	<line x1="60" y1="10" x2="60" y2="60" style="stroke:black;stroke-width:3" />
@@ -91,8 +91,8 @@
 	<rect x="105" y="55" rx="2" ry="2" width="10" height="10" style="fill:black;stroke:black;stroke-width:1;fill-opacity:0.6" onmousemove="ShowTooltip(evt, '1_1_5')"  />
 
 
-	<rect class="tooltip_bg" id="tooltip_bg" x="0" y="0" rx="4" ry="4" width="55" height="17" visibility="hidden"/>
-	<text class="tooltip" id="tooltip" x="0" y="0" visibility="hidden">Tooltip</text>
+    <rect class="tooltip_bg" id="tooltip_bg" x="0" y="0" rx="4" ry="4" width="55" height="17" visibility="hidden"/>
+    <text class="tooltip" id="tooltip" x="0" y="0" visibility="hidden">Tooltip</text>
 
 
 </svg>

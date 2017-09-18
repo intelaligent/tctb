@@ -1,0 +1,9 @@
+<types>
+    <type id="district.default" priority="10" numLanes="1" speed="13.4"/>
+    <type id="district.1.30" priority="10" numLanes="1" speed="13.4"/>
+    <type id="district.2.30" priority="10" numLanes="2" speed="13.4"/>
+    <type id="district.3.30" priority="10" numLanes="3" speed="13.4"/>
+    <type id="district.1.40" priority="10" numLanes="1" speed="17.9"/>
+    <type id="district.2.40" priority="10" numLanes="2" speed="17.9"/>
+    <type id="district.3.40" priority="10" numLanes="3" speed="17.9"/>
+</types>

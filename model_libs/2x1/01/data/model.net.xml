@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on Fri Aug 11 15:13:17 2017 by SUMO netconvert Version 0.30.0
+<!-- generated on Mon Sep 18 16:20:33 2017 by SUMO netconvert Version 0.30.0
 <?xml version="1.0" encoding="UTF-8"?>
 
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
@@ -9,6 +9,7 @@
         <node-files value="model.nod.xml"/>
         <edge-files value="model.edg.xml"/>
         <connection-files value="model.con.xml"/>
+        <type-files value="model.typ.xml"/>
     </input>
 
     <output>
@@ -30,90 +31,98 @@
 
     <location netOffset="0.00,50.00" convBoundary="0.00,0.00,200.00,50.00" origBoundary="0.00,-50.00,200.00,0.00" projParameter="!"/>
 
+    <type id="district.1.30" priority="10" numLanes="1" speed="13.40"/>
+    <type id="district.1.40" priority="10" numLanes="1" speed="17.90"/>
+    <type id="district.2.30" priority="10" numLanes="2" speed="13.40"/>
+    <type id="district.2.40" priority="10" numLanes="2" speed="17.90"/>
+    <type id="district.3.30" priority="10" numLanes="3" speed="13.40"/>
+    <type id="district.3.40" priority="10" numLanes="3" speed="17.90"/>
+    <type id="district.default" priority="10" numLanes="1" speed="13.40"/>
+
     <edge id=":1_1_0_0" function="internal">
-        <lane id=":1_1_0_0_0" index="0" speed="13.90" length="5.00" shape="48.35,4.75 48.16,3.39 47.58,2.43 46.61,1.84 45.25,1.65"/>
+        <lane id=":1_1_0_0_0" index="0" speed="13.40" length="5.00" shape="48.35,4.75 48.16,3.39 47.58,2.43 46.61,1.84 45.25,1.65"/>
     </edge>
     <edge id=":1_1_0_1" function="internal">
-        <lane id=":1_1_0_1_0" index="0" speed="13.90" length="10.32" shape="48.35,4.75 48.75,1.95 49.95,-0.05 51.95,-1.25 54.75,-1.65"/>
+        <lane id=":1_1_0_1_0" index="0" speed="13.40" length="10.32" shape="48.35,4.75 48.75,1.95 49.95,-0.05 51.95,-1.25 54.75,-1.65"/>
     </edge>
     <edge id=":1_1_0_2" function="internal">
-        <lane id=":1_1_0_2_0" index="0" speed="13.90" length="5.00" shape="54.75,1.65 53.39,1.84 52.43,2.43 51.84,3.39 51.65,4.75"/>
+        <lane id=":1_1_0_2_0" index="0" speed="13.40" length="5.00" shape="54.75,1.65 53.39,1.84 52.43,2.43 51.84,3.39 51.65,4.75"/>
     </edge>
     <edge id=":1_1_0_3" function="internal">
-        <lane id=":1_1_0_3_0" index="0" speed="13.90" length="9.50" shape="54.75,1.65 45.25,1.65"/>
+        <lane id=":1_1_0_3_0" index="0" speed="13.40" length="9.50" shape="54.75,1.65 45.25,1.65"/>
     </edge>
     <edge id=":1_1_0_4" function="internal">
-        <lane id=":1_1_0_4_0" index="0" speed="13.90" length="9.50" shape="45.25,-1.65 54.75,-1.65"/>
+        <lane id=":1_1_0_4_0" index="0" speed="13.40" length="9.50" shape="45.25,-1.65 54.75,-1.65"/>
     </edge>
     <edge id=":1_1_0_5" function="internal">
-        <lane id=":1_1_0_5_0" index="0" speed="13.90" length="5.28" shape="45.25,-1.65 48.05,-1.25 50.05,-0.05 50.11,0.05"/>
+        <lane id=":1_1_0_5_0" index="0" speed="13.40" length="5.28" shape="45.25,-1.65 48.05,-1.25 50.05,-0.05 50.11,0.05"/>
     </edge>
     <edge id=":1_1_0_6" function="internal">
-        <lane id=":1_1_0_6_0" index="0" speed="13.90" length="5.04" shape="50.11,0.05 51.25,1.95 51.65,4.75"/>
+        <lane id=":1_1_0_6_0" index="0" speed="13.40" length="5.04" shape="50.11,0.05 51.25,1.95 51.65,4.75"/>
     </edge>
     <edge id=":1_1_5_0" function="internal">
-        <lane id=":1_1_5_0_0" index="0" speed="13.90" length="0.10" shape="100.00,1.65 100.00,1.65"/>
+        <lane id=":1_1_5_0_0" index="0" speed="13.40" length="0.10" shape="100.00,1.65 100.00,1.65"/>
     </edge>
     <edge id=":1_1_5_1" function="internal">
-        <lane id=":1_1_5_1_0" index="0" speed="13.90" length="0.10" shape="100.00,-1.65 100.00,-1.65"/>
+        <lane id=":1_1_5_1_0" index="0" speed="13.40" length="0.10" shape="100.00,-1.65 100.00,-1.65"/>
     </edge>
     <edge id=":2_1_0_0" function="internal">
-        <lane id=":2_1_0_0_0" index="0" speed="13.90" length="5.00" shape="148.35,4.75 148.16,3.39 147.57,2.43 146.61,1.84 145.25,1.65"/>
+        <lane id=":2_1_0_0_0" index="0" speed="13.40" length="5.00" shape="148.35,4.75 148.16,3.39 147.57,2.43 146.61,1.84 145.25,1.65"/>
     </edge>
     <edge id=":2_1_0_1" function="internal">
-        <lane id=":2_1_0_1_0" index="0" speed="13.90" length="10.32" shape="148.35,4.75 148.75,1.95 149.95,-0.05 151.95,-1.25 154.75,-1.65"/>
+        <lane id=":2_1_0_1_0" index="0" speed="13.40" length="10.32" shape="148.35,4.75 148.75,1.95 149.95,-0.05 151.95,-1.25 154.75,-1.65"/>
     </edge>
     <edge id=":2_1_0_2" function="internal">
-        <lane id=":2_1_0_2_0" index="0" speed="13.90" length="5.00" shape="154.75,1.65 153.39,1.84 152.43,2.42 151.84,3.39 151.65,4.75"/>
+        <lane id=":2_1_0_2_0" index="0" speed="13.40" length="5.00" shape="154.75,1.65 153.39,1.84 152.43,2.42 151.84,3.39 151.65,4.75"/>
     </edge>
     <edge id=":2_1_0_3" function="internal">
-        <lane id=":2_1_0_3_0" index="0" speed="13.90" length="9.50" shape="154.75,1.65 145.25,1.65"/>
+        <lane id=":2_1_0_3_0" index="0" speed="13.40" length="9.50" shape="154.75,1.65 145.25,1.65"/>
     </edge>
     <edge id=":2_1_0_4" function="internal">
-        <lane id=":2_1_0_4_0" index="0" speed="13.90" length="9.50" shape="145.25,-1.65 154.75,-1.65"/>
+        <lane id=":2_1_0_4_0" index="0" speed="13.40" length="9.50" shape="145.25,-1.65 154.75,-1.65"/>
     </edge>
     <edge id=":2_1_0_5" function="internal">
-        <lane id=":2_1_0_5_0" index="0" speed="13.90" length="5.28" shape="145.25,-1.65 148.05,-1.25 150.05,-0.05 150.11,0.05"/>
+        <lane id=":2_1_0_5_0" index="0" speed="13.40" length="5.28" shape="145.25,-1.65 148.05,-1.25 150.05,-0.05 150.11,0.05"/>
     </edge>
     <edge id=":2_1_0_6" function="internal">
-        <lane id=":2_1_0_6_0" index="0" speed="13.90" length="5.04" shape="150.11,0.05 151.25,1.95 151.65,4.75"/>
+        <lane id=":2_1_0_6_0" index="0" speed="13.40" length="5.04" shape="150.11,0.05 151.25,1.95 151.65,4.75"/>
     </edge>
 
-    <edge id="1_1_0-1_1_1" from="1_1_0" to="1_1_1" priority="-1">
-        <lane id="1_1_0-1_1_1_0" index="0" speed="13.90" length="45.25" shape="45.25,1.65 0.00,1.65"/>
+    <edge id="1_1_0-1_1_1" from="1_1_0" to="1_1_1" priority="10" type="district.default">
+        <lane id="1_1_0-1_1_1_0" index="0" speed="13.40" length="45.25" shape="45.25,1.65 0.00,1.65"/>
     </edge>
-    <edge id="1_1_0-1_1_3" from="1_1_0" to="1_1_3" priority="-1">
-        <lane id="1_1_0-1_1_3_0" index="0" speed="13.90" length="45.25" shape="51.65,4.75 51.65,50.00"/>
+    <edge id="1_1_0-1_1_3" from="1_1_0" to="1_1_3" priority="10" type="district.default">
+        <lane id="1_1_0-1_1_3_0" index="0" speed="13.40" length="45.25" shape="51.65,4.75 51.65,50.00"/>
     </edge>
-    <edge id="1_1_0-1_1_5" from="1_1_0" to="1_1_5" priority="-1">
-        <lane id="1_1_0-1_1_5_0" index="0" speed="13.90" length="45.25" shape="54.75,-1.65 100.00,-1.65"/>
+    <edge id="1_1_0-1_1_5" from="1_1_0" to="1_1_5" priority="10" type="district.default">
+        <lane id="1_1_0-1_1_5_0" index="0" speed="13.40" length="45.25" shape="54.75,-1.65 100.00,-1.65"/>
     </edge>
-    <edge id="1_1_1-1_1_0" from="1_1_1" to="1_1_0" priority="-1">
-        <lane id="1_1_1-1_1_0_0" index="0" speed="13.90" length="45.25" shape="0.00,-1.65 45.25,-1.65"/>
+    <edge id="1_1_1-1_1_0" from="1_1_1" to="1_1_0" priority="10" type="district.default">
+        <lane id="1_1_1-1_1_0_0" index="0" speed="13.40" length="45.25" shape="0.00,-1.65 45.25,-1.65"/>
     </edge>
-    <edge id="1_1_3-1_1_0" from="1_1_3" to="1_1_0" priority="-1">
-        <lane id="1_1_3-1_1_0_0" index="0" speed="13.90" length="45.25" shape="48.35,50.00 48.35,4.75"/>
+    <edge id="1_1_3-1_1_0" from="1_1_3" to="1_1_0" priority="10" type="district.default">
+        <lane id="1_1_3-1_1_0_0" index="0" speed="13.40" length="45.25" shape="48.35,50.00 48.35,4.75"/>
     </edge>
-    <edge id="1_1_5-1_1_0" from="1_1_5" to="1_1_0" priority="-1">
-        <lane id="1_1_5-1_1_0_0" index="0" speed="13.90" length="45.25" shape="100.00,1.65 54.75,1.65"/>
+    <edge id="1_1_5-1_1_0" from="1_1_5" to="1_1_0" priority="10" type="district.default">
+        <lane id="1_1_5-1_1_0_0" index="0" speed="13.40" length="45.25" shape="100.00,1.65 54.75,1.65"/>
     </edge>
-    <edge id="1_1_5-2_1_0" from="1_1_5" to="2_1_0" priority="-1">
-        <lane id="1_1_5-2_1_0_0" index="0" speed="13.90" length="45.25" shape="100.00,-1.65 145.25,-1.65"/>
+    <edge id="1_1_5-2_1_0" from="1_1_5" to="2_1_0" priority="10" type="district.default">
+        <lane id="1_1_5-2_1_0_0" index="0" speed="13.40" length="45.25" shape="100.00,-1.65 145.25,-1.65"/>
     </edge>
-    <edge id="2_1_0-1_1_5" from="2_1_0" to="1_1_5" priority="-1">
-        <lane id="2_1_0-1_1_5_0" index="0" speed="13.90" length="45.25" shape="145.25,1.65 100.00,1.65"/>
+    <edge id="2_1_0-1_1_5" from="2_1_0" to="1_1_5" priority="10" type="district.default">
+        <lane id="2_1_0-1_1_5_0" index="0" speed="13.40" length="45.25" shape="145.25,1.65 100.00,1.65"/>
     </edge>
-    <edge id="2_1_0-2_1_3" from="2_1_0" to="2_1_3" priority="-1">
-        <lane id="2_1_0-2_1_3_0" index="0" speed="13.90" length="45.25" shape="151.65,4.75 151.65,50.00"/>
+    <edge id="2_1_0-2_1_3" from="2_1_0" to="2_1_3" priority="10" type="district.default">
+        <lane id="2_1_0-2_1_3_0" index="0" speed="13.40" length="45.25" shape="151.65,4.75 151.65,50.00"/>
     </edge>
-    <edge id="2_1_0-2_1_5" from="2_1_0" to="2_1_5" priority="-1">
-        <lane id="2_1_0-2_1_5_0" index="0" speed="13.90" length="45.25" shape="154.75,-1.65 200.00,-1.65"/>
+    <edge id="2_1_0-2_1_5" from="2_1_0" to="2_1_5" priority="10" type="district.default">
+        <lane id="2_1_0-2_1_5_0" index="0" speed="13.40" length="45.25" shape="154.75,-1.65 200.00,-1.65"/>
     </edge>
-    <edge id="2_1_3-2_1_0" from="2_1_3" to="2_1_0" priority="-1">
-        <lane id="2_1_3-2_1_0_0" index="0" speed="13.90" length="45.25" shape="148.35,50.00 148.35,4.75"/>
+    <edge id="2_1_3-2_1_0" from="2_1_3" to="2_1_0" priority="10" type="district.default">
+        <lane id="2_1_3-2_1_0_0" index="0" speed="13.40" length="45.25" shape="148.35,50.00 148.35,4.75"/>
     </edge>
-    <edge id="2_1_5-2_1_0" from="2_1_5" to="2_1_0" priority="-1">
-        <lane id="2_1_5-2_1_0_0" index="0" speed="13.90" length="45.25" shape="200.00,1.65 154.75,1.65"/>
+    <edge id="2_1_5-2_1_0" from="2_1_5" to="2_1_0" priority="10" type="district.default">
+        <lane id="2_1_5-2_1_0_0" index="0" speed="13.40" length="45.25" shape="200.00,1.65 154.75,1.65"/>
     </edge>
 
     <tlLogic id="1_1_0" type="static" programID="0" offset="0">

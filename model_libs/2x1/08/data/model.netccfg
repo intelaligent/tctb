@@ -4,6 +4,7 @@
 		<node-files value="model.nod.xml"/>
 		<edge-files value="model.edg.xml"/>
 		<connection-files value="model.con.xml"/>
+		<type-files value="model.typ.xml"/>
 	</input>
 	<output>
 		<output-file value="model.net.xml"/>
