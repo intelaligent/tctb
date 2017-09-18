@@ -76,12 +76,12 @@ $(document).ready(function(){
       {% for model in site.models %}
       <tr>
          <td align="center">{{ model.model_id }}</td>
-         <td align="center"><object data="images/models/tctester-{{model.model_id}}-data-{{model.model_name}}.svg" type="image/svg+xml"></object>
+         <td align="center"><object data="images/models/tctb-{{model.model_id}}-data-{{model.model_name}}.svg" type="image/svg+xml"></object>
          </td>
          <td>{{ model.dimensions }}</td>
          <!-- <td>Simple</td> -->
-         <td><a href="https://github.com/intelaligent/tctester/tree/master/{{model.group}}/{{model.subgroup}}/{{model.number}}/data">src</a></td>
-         <td><a href="https://github.com/intelaligent/tctester/tree/master/{{model.group}}/{{model.subgroup}}/{{model.number}}.tar.gz">.tar.gz</a></td>
+         <td><a href="https://github.com/intelaligent/tctb/tree/master/{{model.group}}/{{model.subgroup}}/{{model.number}}/data">src</a></td>
+         <td><a href="https://github.com/intelaligent/tctb/tree/master/{{model.group}}/{{model.subgroup}}/{{model.number}}.tar.gz">.tar.gz</a></td>
       </tr>
       {% endfor %}
    </tbody>
