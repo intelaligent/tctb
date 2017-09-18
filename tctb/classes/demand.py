@@ -43,6 +43,10 @@ class Demand_RandomTrips:
                 "-n", scn.get("net_file"),
                 # "-o", scenario_dir + "/data/model.trip.xml",
                 "-o", scn.get("demand_file"),
+                "--route-file", os.path.join(
+                                    scn.get("dir"),
+                                    scn.get("demand_type") + ".rou.xml"
+                                ),
                 "--prefix", scn.get("prefix"),
                 "--fringe-factor", "100",
                 "--validate"
