@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+Demo simulation configuration
+Intersection Control Test Bed
+-->
+<simulation steps="2000">
+    <scenario name="5x3/01 default">
+        <network path="../model_libs/2x1/03" />
+        <demand type="randomTrips"/>
+        <agent type="none" />
+    </scenario>
+    <scenario name="5x3/01 coordinated">
+        <network path="../model_libs/2x1/03" />
+        <demand type="randomTrips"/>
+        <agent type="tls_sumo_coordinator" />
+    </scenario>
+    <monitor name = "throughput_network" title = "Network Throughput"/>
+</simulation>
