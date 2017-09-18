@@ -138,7 +138,7 @@ class MonitorManager:
             # self._df_dict[mon_config.get("name")].hist()
             self._df_dict[mon_config.get("name")].plot(
                     kind = "density",
-                    title = mon_config.get("name"),
+                    title = mon_config.get("title") if mon_config.get("title") else mon_config.get("name"),
                     # subplots = True,
 
                     # layout = (2,1),
