@@ -1,0 +1,6 @@
+<viewsettings>
+    <delay value="100"/>
+    <scheme name="custom_district">
+        <vehicles vehicleMode="8" />
+    </scheme>
+</viewsettings>

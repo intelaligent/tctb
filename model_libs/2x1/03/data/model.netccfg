@@ -3,11 +3,13 @@
 	<input>
 		<node-files value="model.nod.xml"/>
 		<edge-files value="model.edg.xml"/>
+		<connection-files value="model.con.xml"/>
 	</input>
 	<output>
 		<output-file value="model.net.xml"/>
 	</output>
-	<report>
-		<verbose value="true"/>
-	</report>
+
+    <report>
+        <verbose value="true"/>
+    </report>
 </configuration>
