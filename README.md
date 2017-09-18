@@ -6,10 +6,12 @@ The Traffic Control Test Bed project aims to develop a platform on which traffic
 
 Project Website: [https://intelaligent.github.io/tctb/index.html](https://intelaligent.github.io/tctb/index.html)
 
+## License
+
+Traffic Control Test Bed is licensed under GPL, see the file LICENSE.md for details.
 
 ## Legacy Reference
 
 Started by [Simon Box](https://sourceforge.net/u/srb2242/profile/), some initial models of this project was hosted on [http://tctester.sourceforge.net/](http://tctester.sourceforge.net/).
 
 You can find his legacy codes in the **legacy_src** folder.
-
