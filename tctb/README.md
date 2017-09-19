@@ -2,10 +2,10 @@
 
 This folder contains the core codes of the [Traffic Control Test Bed](https://github.com/intelaligent/tctb) project.
 
-## Prerequisite
+## Prerequisites
 
-* SUMO (environment variable `SUMO_HOME` need to be declared)
-* Python libraries: numpy,pandas,matplotlib
+* SUMO (with environment variable `SUMO_HOME` declared)
+* Python libraries: `numpy`, `pandas`, `matplotlib`
 
 ## Demo
 
