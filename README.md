@@ -6,7 +6,8 @@ The Traffic Control Test Bed project aims to develop a platform on which traffic
 
 Project Website: [https://intelaligent.github.io/tctb/index.html](https://intelaligent.github.io/tctb/index.html)
 
-![Case study M1 J14](https://intelaligent.github.io/images/models/videos/ST_draft_demo.png) [video version](https://intelaligent.github.io/images/models/videos/ST_draft_demo.mp4)
+![Case study M1 J14](https://intelaligent.github.io/tctb/images/videos/ST_draft_demo.png)
+[video version](https://intelaligent.github.io/tctb/images/videos/ST_draft_demo.mp4)
 
 ## License
 
