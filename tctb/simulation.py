@@ -92,7 +92,8 @@ if __name__ == "__main__":
     if not os.path.exists(args.workspace):
         os.makedirs(args.workspace)
 
-    work_dir = os.path.join(args.workspace, datetime.datetime.now().strftime("%Y%m%d_%H%M%S"))
+    sim_dir = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    work_dir = os.path.join(args.workspace, sim_dir)
     os.makedirs(work_dir)
 
 
@@ -187,4 +188,15 @@ if __name__ == "__main__":
     # cm.close_all()
     sm.close_all()
     
+
+    # Create symlink to the latest results
+    latest_link = os.path.join(args.workspace,"latest")
+    latest_target = sim_dir
+
+    if not os.path.exists(latest_link) :
+        os.symlink(latest_target, latest_link)
+    else :
+        os.remove(latest_link)
+        os.symlink(latest_target, latest_link)
+
     print("simulation finished\n")
