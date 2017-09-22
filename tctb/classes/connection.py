@@ -59,6 +59,8 @@ class Connection:
         command.append(str(self.port))
         command.append("--tripinfo-output")
         command.append(self.network_path + "/out_tripinfo.xml")
+        command.append("--queue-output")
+        command.append(self.network_path + "/out_queue.xml")
         command.append("--quit-on-end")
         command.append("--start")
         command.append("--step-method.ballistic")
