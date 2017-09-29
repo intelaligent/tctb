@@ -25,11 +25,11 @@ import sys
 
 from subprocess import call
 
-class Agent:
-    _name = ""
+class Agent(object):
+    # _name = ""
 
-    def __init__(self, name):
-        self._name = name
+    def init():
+        raise NotImplementedError( "Method init not implemented." )
 
 class Agent_Tools:
     """
@@ -72,7 +72,7 @@ class Agent_Tools:
 
         return output_route_file
 
-class Agent_Sumo_Coordinator:
+class Agent_Sumo_Coordinator(Agent):
     """
     doc: http://www.sumo.dlr.de/userdoc/Tools/tls.html#tlsCoordinator.py
     tlsCoordinator.py 
@@ -107,7 +107,7 @@ class Agent_Sumo_Coordinator:
 
         scn.add_additional_file(tls_offset_file)
 
-class Agent_Sumo_Cycle_Adaptation:
+class Agent_Sumo_Cycle_Adaptation(Agent):
     """
     doc: http://www.sumo.dlr.de/userdoc/Tools/tls.html#tlsCycleAdaptation.py
     tlsCycleAdaptation.py

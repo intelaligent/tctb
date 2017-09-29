@@ -18,7 +18,14 @@ plt.autoscale(enable=True, axis='both', tight=None)
 import pandas as pd
 import numpy as np
 
-class Monitor_Throughput_Network:
+
+class Monitor(object):
+    """Monitor Interface"""
+
+    def get_step(self):
+        raise NotImplementedError( "Method get_step not implemented." )
+
+class Monitor_Throughput_Network(Monitor):
 
     # def step(self, scn_list):
     #     for scn in scn_list :
@@ -29,7 +36,7 @@ class Monitor_Throughput_Network:
 
     # def visualise_cumulative(self, ):
 
-class Monitor_Waiting_Time_At_Edges:
+class Monitor_Waiting_Time_At_Edges(Monitor):
 
     # def step(self, scn_list):
     #     for scn in scn_list :
@@ -137,13 +144,19 @@ class MonitorManager:
         for mon_config in self.monitor_config_list :
             # self._df_dict[mon_config.get("name")].hist()
             self._df_dict[mon_config.get("name")].plot(
-                    kind = "density",
+                    kind = "hist",
                     title = mon_config.get("title") if mon_config.get("title") else mon_config.get("name"),
-                    # subplots = True,
+                    subplots = True
 
+                    # color = '#00BFC4', #blue
+                    # color = '#F8766D', #light pink
+                    # color = 'black',
+                    # sharex=True,
+                    # ylim=(0,400),
+                    # xlim=(0,600),
+                    # sharey = True,
                     # layout = (2,1),
-                    sharex=True,
-                    sharey = True
+                    # figsize = (7,6)
                 )
 
             # plt.ion()

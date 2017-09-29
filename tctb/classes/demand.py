@@ -26,15 +26,13 @@ else:
     sys.exit("please declare environment variable 'SUMO_HOME'")
 
 
-# class Demand:
+class Demand(object):
+    """Demand Interface"""
 
-#     def __init__(self, model_dir):
-#         self.model_dir = model_dir
+    def generate(self):
+        raise NotImplementedError( "Method generate not implemented." )
 
-#     # def generate_trip_random(self):
-
-
-class Demand_RandomTrips:
+class Demand_RandomTrips(Demand):
     """randomTrips.py usage: http://sumo.dlr.de/wiki/Tools/Trip#randomTrips.py"""
 
     def generate(self, scn):
@@ -54,7 +52,7 @@ class Demand_RandomTrips:
         )
         print("DM/RT/generate")
 
-class Demand_ODTrips:
+class Demand_ODTrips(Demand):
     """od2trips usage: http://sumo.dlr.de/wiki/OD2TRIPS"""
 
     _od_binary = "od2trips"
