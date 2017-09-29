@@ -17,7 +17,8 @@ def vTypes_file():
 def dump_file(work_dir):
     return """<?xml version="1.0"?>
 <additional>
-    <edgeData id="edge_dump" file="out_dumps_edge.xml"/>
+    <edgeData id="edge_dump" file="out_dumps_edge.xml" excludeEmpty="true"/>
+    <edgeData id="edge_dump_emissions" type="emissions" file="out_dumps_emissions_edge.xml" excludeEmpty="true"/>
     <laneData id="lane_dump" file="out_dumps_lane.xml"/>
 </additional>
 """
