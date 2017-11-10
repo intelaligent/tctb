@@ -182,6 +182,9 @@ if __name__ == "__main__":
 
     mm.show_final_plots()
 
+    for monitor_name, data in mm._df_dict.iteritems():
+        data.to_csv(work_dir + "/monitor_df_" + monitor_name + ".csv", sep = " ")
+
     sys.stdout.flush()
 
 
