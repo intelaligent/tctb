@@ -144,19 +144,19 @@ class MonitorManager:
         for mon_config in self.monitor_config_list :
             # self._df_dict[mon_config.get("name")].hist()
             self._df_dict[mon_config.get("name")].plot(
-                    kind = "hist",
+                    # kind = "hist",
                     title = mon_config.get("title") if mon_config.get("title") else mon_config.get("name"),
-                    subplots = True
+                    # subplots = True
 
                     # color = '#00BFC4', #blue
                     # color = '#F8766D', #light pink
                     # color = 'black',
-                    # sharex=True,
+                    # sharex=True
                     # ylim=(0,400),
                     # xlim=(0,600),
-                    # sharey = True,
+                    # sharey = True
                     # layout = (2,1),
-                    # figsize = (7,6)
+                    figsize = (7,6)
                 )
 
             # plt.ion()
@@ -176,4 +176,4 @@ class MonitorManager:
         return {
             "throughput_network" : lambda scn, monitor_config : Monitor_Throughput_Network().get_step(scn,monitor_config),
             "wait_time_edges" : lambda scn, monitor_config : Monitor_Waiting_Time_At_Edges().get_step(scn,monitor_config)
-        }[monitor_config.get("name")](scn, monitor_config)
+        }[monitor_config.get("name").split(".")[0]](scn, monitor_config)
