@@ -6,6 +6,20 @@
 
 The platform is based on the popular open source microsimulation software package [SUMO(Simulation of Urban MObility)](http://sumo.dlr.de/wiki/Simulation_of_Urban_MObility_-_Wiki).
 
+## Related Publication
+
+B. Gao, B. Anvari, C. Tsotskas, P. Franco, and S. Box, "Developing an open source platform for the evaluation of intelligent traffic control algorithms," in Proceedings of the 8th Transport Research Arena, 2018.
+
+
+```latex
+@inproceedings{Gao,
+author = {Gao, Bo and Anvari, Bani and Tsotskas, Christos and Franco, Patrizia and Box, Simon},
+booktitle = {Proceedings of the 8th Transport Research Arena},
+title = {{Developing an open source platform for the evaluation of intelligent traffic control algorithms}},
+year = {2018}
+}
+```
+
 ## Demo
 
 A case study using the Traffic Control Test Bed platform comparing different traffic control systems at the Northfield roundabout off Junction 14 of the M1 motorway, a strategic location connecting the city of Milton Keynes to the motorway network.
