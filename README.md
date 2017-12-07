@@ -8,13 +8,13 @@ The platform is based on the popular open source microsimulation software packag
 
 ## Related Publication
 
-B. Gao, B. Anvari, C. Tsotskas, P. Franco, and S. Box, "Developing an open source platform for the evaluation of intelligent traffic control algorithms," in Proceedings of the 8th Transport Research Arena, 2018.
+B. Gao, B. Anvari, C. Tsotskas, P. Franco, and S. Box, "Developing an open source platform for the evaluation of intelligent traffic control algorithms," in Proceedings of the 7th Transport Research Arena, 2018.
 
 
 ```latex
 @inproceedings{Gao,
 author = {Gao, Bo and Anvari, Bani and Tsotskas, Christos and Franco, Patrizia and Box, Simon},
-booktitle = {Proceedings of the 8th Transport Research Arena},
+booktitle = {Proceedings of the 7th Transport Research Arena},
 title = {{Developing an open source platform for the evaluation of intelligent traffic control algorithms}},
 year = {2018}
 }
