@@ -7,10 +7,16 @@ permalink: index.html
 toc: false
 summary: Developing a standard platform for evaluating and benchmarking traffic control technologies.
 ---
+<span class="label label-success">Upcoming Event</span>
+[Presentation on the 7th Transport Research Arena](post-publication-tra.html)
+<br/>
 <span class="label label-success">News</span>
 [Nick and Bani's interview at TSC](post-nick-bani-video-tsc.html)
 <br/>
-[Celebrating TRG 50th Anniversary](post-trg50.html)
+<span class="label label-success">Upcoming Event</span>
+[Celebrating UTSG's 50th Anniversary](post-publication-utsg.html)
+<br/>
+[Celebrating TRG's 50th Anniversary](post-trg50.html)
 <br/>
 [Come and join us at TSC IMAGINE 2017](post-imagine-demo.html)
 {% include mp4.html file="videos/Screencast_UPP_demo" width="854" height="480" caption="This video is part of our exhibition at IMAGINE festival at TSC 7th & 8th June 2017." %}

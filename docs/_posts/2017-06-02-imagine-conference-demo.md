@@ -1,10 +1,10 @@
 ---
 title:  "Exhibition at TSC IMAGINE Festival"
-categories: videos
+categories: video, event
 author: Bo Gao
 sidebar: home_sidebar
 permalink: post-imagine-demo.html
-tags: [tsc, conference, demonstration]
+tags: [tsc, conference, video, poster, demonstration]
 toc: true
 summary: Video demonstrating the current state of the platform
 ---

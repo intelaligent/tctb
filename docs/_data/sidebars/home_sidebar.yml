@@ -20,11 +20,11 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Latest Updates
+  - title: Updates
     output: web, pdf
     folderitems:
-    - title: Learning TraCI_tls
-      url: /post-learning-traci-tls.html
+    - title: Latest News
+      url: /news
       output: web, pdf
     - title: Welcome
       url: /post-welcome.html
