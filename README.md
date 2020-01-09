@@ -1,6 +1,8 @@
 # Traffic Control Test Bed
 
 [![Join the chat at https://gitter.im/tctb/Lobby](https://badges.gitter.im/tctb/Lobby.svg)](https://gitter.im/tctb/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3603439.svg)](https://doi.org/10.5281/zenodo.3603439)
+
 
 **Traffic Control Test Bed** is a platform on which traffic control systems can be evaluated and benchmarked against each other on an open and level playing field. The platform includes a library of microsimulation network models and test configurations for the evaluation of traffic control systems.
 
