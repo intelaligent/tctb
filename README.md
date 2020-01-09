@@ -23,7 +23,7 @@ year = {2018}
 }
 ```
 
- - B. Gao, B. Anvari, R. Tusting, C. Tsotskas and P. Franco, "Traffic Control Test Bed: An open source benchmarking platform for intersection control systems", in Proceedings of the [50th Annual UTSG Conference](http://utsg.net/), 2018.
+ - B. Gao, B. Anvari, R. Tusting, C. Tsotskas and P. Franco, "[Traffic Control Test Bed: An open source benchmarking platform for intersection control systems](https://doi.org/10.5281/zenodo.3603445)", in Proceedings of the [50th Annual UTSG Conference](http://utsg.net/), 2018.
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3603446.svg)](https://doi.org/10.5281/zenodo.3603446)
 
 ```latex
