@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.2.7)
+    activesupport (6.1.7.3)
       i18n (~> 0.8)
       json (2.3.0)
       minitest (~> 5.1)
@@ -57,7 +57,7 @@ GEM
       jekyll-theme-time-machine (= 0.0.3)
       jekyll-titles-from-headings (= 0.1.4)
       jemoji (= 0.7.0)
-      kramdown (= 1.11.1)
+      kramdown (= 2.3.1)
       liquid (= 3.0.6)
       listen (= 3.0.6)
       mercenary (~> 0.3)
@@ -80,7 +80,7 @@ GEM
       colorator (~> 1.0)
       jekyll-sass-converter (~> 1.0)
       jekyll-watch (~> 1.1)
-      kramdown (~> 2.3.0)
+      kramdown (~> 2.3.1)
       liquid (~> 3.0)
       mercenary (~> 0.3.3)
       pathutil (~> 0.9)
@@ -155,7 +155,7 @@ GEM
       html-pipeline (~> 2.2)
       jekyll (>= 3.0)
     json (2.3.0)
-    kramdown (2.3.0)
+    kramdown (2.3.1)
     liquid (3.0.6)
     listen (3.0.6)
       rb-fsevent (>= 0.9.3)
@@ -187,7 +187,7 @@ GEM
     thread_safe (0.3.5)
     typhoeus (0.8.0)
       ethon (>= 0.8.0)
-    tzinfo (1.2.2)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     unicode-display_width (1.1.3)
 
